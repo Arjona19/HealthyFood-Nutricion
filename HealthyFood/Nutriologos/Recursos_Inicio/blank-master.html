@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>HelathyFood</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen, projection">
+    <link href="css/sweetalert.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+    <link href="css/animate.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+     <link href="css/style-Master.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+</head>
+<body>
+      <ul id="slide-out" class="side-nav ">
+   <li>
+       <div class="user-view">
+      <div class="background">
+          
+        <img src="res/background2.jpg" class="img"> </div>
+      <a href="#!user"><img class="circle" src="res/LogoH.png"></a>
+      <a href="#!name"><span class="white-text name">Santiago Arjona</span></a>
+      <a href="#!email"><span class="white-text email">wilberth2010@hotmail.com</span></a>
+   </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>   
+    <!--Navegador-->
+  <div class="row">
+  <nav class="light-blue darken-2 nav-extended" role="navigation">
+    <div class="nav-wrapper container">
+        
+      <a id="logo-container" href="#" class="brand-logo titulo white-text">HealthyFood</a>
+        
+      <ul id="1" class="right hide-on-med-and-down">
+
+        <li><a class="waves-effect waves-gray btn white blue-text rounded">INICIO</a></li>
+          <li><a class="waves-effect waves-gray btn white blue-text rounded">DIABETES</a></li>
+          <li><a class="waves-effect waves-gray btn white blue-text rounded">contacto</a></li>
+          <a id="Session" data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating blue lighten btn waves-effect waves-light  modal-trigger tooltipped z-depth-5">
+              <i class="large material-icons ">power_settings_new</i></a>
+          <a data-position="right" data-delay="50" data-tooltip="Perfil" data-activates="slide-out" class="btn-floating  blue lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-5 ">
+              <i class="large material-icons ">account_circle</i></a>
+      </ul>
+      <a href="#" data-target="#1" aria-controls="1" aria-expanded="false" aria-label="Toggle navigation" class=" button-collapse"><i class="material-icons ">menu</i></a>
+    </div>
+  </nav>
+    </div>
+    
+     <!--Footer-->
+  <footer class="page-footer light-blue darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-thin mCSB_scrollTools_vertical" style="display: block;"><a href="#" class="mCSB_buttonUp" oncontextmenu="return false;" style="display: block;"></a><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 157px; max-height: 561px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div><a href="#" class="mCSB_buttonDown" oncontextmenu="return false;" style="display: block;"></a></div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+     </body>
+    
+    <script>
+           $(document).ready(function(){
+               
+                       
+  
+               
+              $(".nav-bar").sideNav({
+      menuWidth: 300, 
+      edge: 'right', // Choose the horizontal origin
+     
+    });
+               
+             $('.collapsible').collapsible();   
+               
+               $('#Session').click(function(){
+           swal({ 
+            title: "Quieres salir del sistema?",   
+            text: "La sesión actual se cerrará y abandonará el sistema",   
+            type: "warning",   
+            showCancelButton: true,   
+            confirmButtonColor: "#0277bd",   
+            confirmButtonText: "Si",
+            animation: "slide-from-top",   
+            closeOnConfirm: false,
+            cancelButtonText: "Cancelar"
+        }, function(){   
+            window.location='index.html'; 
+        })
+        }); 
+           });
+    </script>
+</html>

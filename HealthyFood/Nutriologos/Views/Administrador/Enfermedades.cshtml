@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewBag.Title = "Enfermedades";
+    Layout = "~/Views/Administrador/Pagina_Maestra.cshtml";
+}
+
+
+
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Agregar Enfermedades </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+
+            <li>
+
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+        <button data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-danger"> Agregar Enfermedad</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Actualizar Enfermedades </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+
+            <li>
+
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table>
+            @using (Ajax.BeginForm("Actualizar_Datos_Enfermedad", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
+            {
+                <td> <input class="form-control" name="Nombre" value="@ViewBag.Nombre" type="text" /> </td>
+                <td> <input class="form-control" name="Valor" value="@ViewBag.Valor" type="text" /> </td>
+                <td> <input name="id" style="visibility:hidden" value="@ViewBag.Id" /> </td>
+                <td>
+                    @Html.AntiForgeryToken() <button class="btn btn-outline-danger"> Actualizar Enfermedad</button>
+                </td>}
+        </table>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Lista de Enfermedades </h2>
+        <br /><br />
+        @using (Ajax.BeginForm("ReporteEnfermedades", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
+            { @Html.AntiForgeryToken()<button class="btn btn-success" style="border:0px; left:5%;">Generar Reporte</button>}
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+
+            </li>
+
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="x_content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Valor Formular</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </tr>
+            <tbody>
+
+       
+
+                    <tr id="fila_">
+
+
+                        <td> </td>
+                        <td></td>
+
+                        <td>
+                          <button type="submit" class="btn btn-success">✓</button>
+                        </td>
+
+                        <td>
+                         
+                                <button type="submit" class="btn btn-danger">X</button>
+                            
+                        </td>
+
+
+                    </tr>
+
+                
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<!--Modal-->
+@using (Ajax.BeginForm("AgregarEnfe", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
+{ @Html.AntiForgeryToken()
+    <div class="fade animated modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Agregar enfermedad</h2>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name " class="col-form-label"></label>
+                            <input type="text" name="Nombre" class="form-control" required="required" placeholder="Ingrese enefermedad" id="recipient-name">
+                            <input type="text" name="Nombre" class="form-control" required="required" placeholder="Valor Enfermedad" id="recipient-name">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
