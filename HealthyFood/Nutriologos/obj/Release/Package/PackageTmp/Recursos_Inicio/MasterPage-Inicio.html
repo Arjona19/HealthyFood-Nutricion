@@ -10,34 +10,99 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="css/sweetalert.css"  type="text/css" rel="stylesheet" media="screen,projection" >
-    <link href="css/animate.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+    <link href="css/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection" >
+    <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" >
      <link href="css/style-Master.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+   <!--<link rel="stylesheet" href="SuperAdmnistrador/css/application.css">-->
+    
+     <style>
+    .main {
+  background: url("SuperAdmnistrador/images/Dark_background_1920x1080.png") center top no-repeat;
+  background-size: cover; 
+         display: block}
+    </style>
 </head>
 <body>
+   <main class="main">
+
+ <ul id="slide-out" class="side-nav">
+   <li>
+       <div class="user-view">
+      <div class="background">
+        <img src="res/background2.jpg" class="img"> </div>
+      <a href="#!user"><img class="circle" src="res/icon-healthyfood.png"></a>
+      <a href="#!name"><span class="white-text name">Santiago Arjona</span></a>
+      <a href="#!email"><span class="white-text email">wilberth2010@hotmail.com</span></a>
+   </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>  
  <!--Navegador-->
-  <div class="ro">
-  <nav class="light-blue darken-2 nav-extended" role="navigation">
-    <div class="nav-wrapper container">
+  <div class="navbar-fixed">
+  <nav class="light-blue darken-2 nav-extended " role="navigation">
+      <ul id="1" class="left hide-on-med-and-down">
+                   <a data-position="bottom" data-delay="50" data-tooltip="Menú" data-activates="slide-out" class="btn-floating  blue lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-2 ">
+              <i class="large material-icons ">menu</i></a>
+        </ul>
         
+    <div class="nav-wrapper container">
+              
       <a id="logo-container" href="#" class="brand-logo titulo white-text">HealthyFood</a>
         
       <ul id="1" class="right hide-on-med-and-down">
-
-       <li><a class="waves-effect waves-gray btn white blue-text rounded">INICIO</a></li>
-          <li><a class="waves-effect waves-gray btn white blue-text rounded">DIABETES</a></li>
-          <li><a class="waves-effect waves-gray btn white blue-text rounded">contacto</a></li>
-          <a id="Session" data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating blue lighten btn waves-effect waves-light  modal-trigger tooltipped z-depth-5">
-              <i class="large material-icons ">power_settings_new</i></a>
-          <a data-position="right" data-delay="50" data-tooltip="Perfil" data-activates="slide-out" class="btn-floating  blue lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-5 ">
-              <i class="large material-icons ">account_circle</i></a>
+       <li><a href="#cards" class="waves-effect waves-gray btn white blue-text rounded">INICIO</a></li>
+          <li><a class="waves-effect waves-gray btn white blue-text rounded">Contacto</a></li>
+          <li><a href="#guia" class="waves-effect waves-gray btn white blue-text rounded modal-trigger">Guia de uso</a></li>
+          <a id="sesion"  data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating blue lighten btn waves-effect waves-light  modal-trigger tooltipped z-depth-2">
+              <i class="large material-icons ">exit_to_app</i></a>
       </ul>
-      <a href="#" data-target="#1" aria-controls="1" aria-expanded="false" aria-label="Toggle navigation" class=" button-collapse"><i class="material-icons ">menu</i></a>
+        <div class="tap-target blue" data-activates="sesion">
+    <div class="tap-target-content">
+      <h5>Cerrar sesión</h5>
+      <p>Esta boton permite cerrar la sesión del usuario</p>
     </div>
-  </nav>
+  </div>
+        
+      <a href="#" data-activates="slide-out" aria-controls="1" aria-expanded="true" aria-label="Toggle navigation" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+        
+    </div>
+  </nav>   
+    </div>
+    <div id="guia" class="modal left-sheet">
+    <div class="modal-content">
+      <h3>Guia de uso  <i class="large material-icons" style="font-size: 40px">description</i></h3>
+      
+    <div class="col s12">
+     <ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a class="active" href="#test-swipe-1">Sesión</a></li>
+    <li class="tab col s3"><a  href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12">
+        <h5>Cerrar sesión</h5>
+        <a id="target" class="btn rounded" >Ver</a>
+        </div>
+  <div id="test-swipe-2" class="col s12 red">
+        
+        
+    </div>
+  <div id="test-swipe-3" class="col s12 green">
+        
+        
+        </div>
+  </div>
+        
+  
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
     </div>
  <!--Cards-->
-         <article class="col s12 animated fadeInUp">
+         <article id="cards" class="col s12 animated fadeInUp scrollspy">
                 
                 <div class=" center-align" style="margin: 40px 0;">
                     <div class="tile type-card z-depth-4 blue">
@@ -208,7 +273,7 @@
     </div>
   </footer>
   
-
+</div>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
@@ -218,19 +283,25 @@
 <!--No mover nada de scripst-->    
     <script>
            $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+         $('ul.tabs').tabs();
+         $('.modal').modal();
+        $('#target').click(function(){
+             $('.tap-target').tapTarget('open'); 
+        });
+           $(document).ready(function(){
                   $('.slider').slider();
                              $('.carousel').carousel();
-  
-               
-              $(".nav-bar").sideNav({
+    $(".nav-bar").sideNav({
       menuWidth: 300, 
-      edge: 'right', // Choose the horizontal origin
-     
+      edge: 'left', // Choose the horizontal origin
     });
+  
                
              $('.collapsible').collapsible();   
                
-               $('#Session').click(function(){
+               $('#sesion').click(function(){
            swal({ 
             title: "Quieres salir del sistema?",   
             text: "La sesión actual se cerrará y abandonará el sistema",   

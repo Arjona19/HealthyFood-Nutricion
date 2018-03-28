@@ -5,140 +5,173 @@
 }
 
 
-<div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card mdl-shadow--2dp trending">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Agregar Clasificación</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Nombre Clasificacón</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Agregar Clasificaciones de Comidas </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+        <button data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-danger"> Agregar clasificaciones</button>
+    </div>
+</div>
+
+
+
+
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Clasificaciones de comidas </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+
+            </li>
+
+            <li>
+
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table>
+            @using (Ajax.BeginForm("Actualizar_Datos_Clas", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
+            {
+                <td> <input class="form-control" name="Nombre" value="@ViewBag.Nombre" type="text" /> </td>
+
+                <td> <img src="~/Galeria/Clasificaciones/@ViewBag.Imagen" class="img-circle" alt="140x140" style="width: 100px; height: 100px;" /> </td>
+
+                <td> <input name="id" style="visibility:hidden" value="@ViewBag.Id" /> </td>
+
+                <td>
+                    @Html.AntiForgeryToken() <button class="btn btn-outline-danger"> Actualizar Clasificación</button>
+                </td>}
+        </table>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="clearfix"> </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Lista de Clasificaciones de Comidas </h2>
+        <br /><br />
+        @using (Ajax.BeginForm("ReporteClasificacion", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
+        { @Html.AntiForgeryToken()<button class="btn btn-success" style="border:0px; left:5%;">Generar Reporte</button>}
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+
+            </li>
+
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="x_content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>
+                </tr>
+            <tbody>
+
+
+                    <tr id=" ">
+
+
+                        <td><a style="text-align:center">  </a></td>
+
+                      
+
+                        <td>
+                         <button type="submit" class="btn btn-success">✓</button> 
+                        </td>
+                        <td>
+                           
+                                <button type="submit" class="btn btn-danger">X</button>
+                            
+
+                        </td>
+
 
                     </tr>
-                </thead>
-            </table>
 
-            <table>
-                <tr>
-                    <td style="text-align:right">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple">
-                            <i class="material-icons">forward</i>
-                            Agregar
-                            <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.785px; height: 271.785px; transform: translate(-50%, -50%) translate(76px, 18px);"></span></span>
-                        </button>
-                    </td>
-                </tr>
-            </table>
+                
+            </tbody>
 
-
-
-        </div>
+        </table>
     </div>
 </div>
 
-<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card mdl-shadow--2dp trending">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Actualizar Ingrediente</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
+
+<!--Modal-->
+@using (Ajax.BeginForm("AgregarClas", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+{ @Html.AntiForgeryToken()
+    <div class="fade animated modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Agregar Clasificacion</h2>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="form-group">
 
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Nombre Clasificación</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Valor Enegetico</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Valor Proteico</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Valor liquido</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">Valor Hidrato</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
 
-            <table>
-                <tr>
-                    <td style="text-align:right">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple">
-                            <i class="material-icons">forward</i>
-                            Actualizar
-                            <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.785px; height: 271.785px; transform: translate(-50%, -50%) translate(76px, 18px);"></span></span>
-                        </button>
-                    </td>
-                </tr>
-            </table>
+                            <input id="wizard-picture" name="filename" type="file">
 
+                            <label for="recipient-name " class="col-form-label"></label>
+                            <input type="text" name="Clasificacion" class="form-control" required="required" placeholder="Ingrese clasificacion" id="recipient-name">
 
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+}
 
-<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card mdl-shadow--2dp trending">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text" style="position:center">Lista de Clasificaciones</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
 
-            <ul class="mdl-list"></ul>
 
-        </div>
-    </div>
-</div>
+

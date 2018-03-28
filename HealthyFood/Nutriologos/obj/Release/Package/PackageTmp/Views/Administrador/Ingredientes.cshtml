@@ -5,170 +5,92 @@
 }
 
 
-
 <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  ">
-    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp animated fadeInDown ">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Ingredientes</h2>
-        </div>
-        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable  projects-table">
-            <thead>
-                <tr>
+<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp animated fadeInDown ">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Ingredientes</h2>
+                </div>
+                <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable  projects-table">
+                    <thead>
+                        <tr>
+                           <th class="mdl-data-table__cell--non-numeric">Project</th>
+                            <th class="mdl-data-table__cell--non-numeric">Responsible</th>
+                            <th class="mdl-data-table__cell--non-numeric">Client contact</th>
+                            <th class="mdl-data-table__cell--non-numeric">Deadline</th>
+                            <th class="mdl-data-table__cell--non-numeric">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--secondary">Everybody</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                               <!--Acciones-->  
+                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue modal__trigger" data-modal="#modal">
+                                    <i class="material-icons">create</i>
+                                </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="Act">
+                                    Actualizar
+                                </div>
+                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="Elim">
+                                   Eliminar
+                                </div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--secondary">Everybody</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <!--Acciones-->
+                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue modal__trigger" data-modal="#modal">
+                                    <i class="material-icons">create</i>
+                                </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="Act">
+                                    Actualizar
+                                </div>
+                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="Elim">
+                                    Eliminar
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <th class="mdl-data-table__cell--non-numeric">Project</th>
-                    <th class="mdl-data-table__cell--non-numeric">Responsible</th>
-                    <th class="mdl-data-table__cell--non-numeric">Client contact</th>
-                    <th class="mdl-data-table__cell--non-numeric">Deadline</th>
-                    <th class="mdl-data-table__cell--non-numeric">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                    <td class="mdl-data-table__cell--non-numeric">
-                        <span class="label label--mini background-color--secondary">Everybody</span>
-                    </td>
-                    <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                    <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                    <td class="mdl-data-table__cell--non-numeric">
-                        <!--Acciones-->
-                        <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue">
-                            <i class="material-icons">create</i>
-                        </button>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="Act">
-                            Actualizar
-                        </div>
-                        <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red">
-                            <i class="material-icons">delete</i>
-                        </button>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="Elim">
-                            Eliminar
-                        </div>
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="mdl-card__actions">
-            <!-- Boton agregar-->
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored-purple mdl-shadow--8dp modal__trigger " style="background-color:#15a2d0;" data-modal="#modal">
-                <i class="material-icons">add</i>
-            </button>
-        </div>
+    <div class="mdl-card__actions">
+    <!-- Boton agregar-->
+        <button  class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored-purple mdl-shadow--8dp modal__trigger " style="background-color:#15a2d0;" data-modal="#modal">
+            <i class="material-icons">add</i>
+        </button>
     </div>
-
+    </div>
 </div>
 <div id="modal" class="modal modal__bg">
     <div class="modal__dialog">
         <div class="modal__content">
             <div class="modal__header">
                 <div class="modal__title">
-                    <h2 class="modal__title-text">Agregar Ingredientes</h2>
+                    <h2 class="modal__title-text">Modal</h2>
                 </div>
             </div>
             <div class="modal__text">
                 <p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Nombre Ingrediente</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Cantidad</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Tipo unidad</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Clasificación</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Valor Energizante</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Valor Proteina</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Valor Lipido </label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Valor Hidrato</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="modal-body">
-                                        <form action="#">
-                                            <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                                <label class="mdl-textfield__label" for="sample1">Valor Fibra</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </th>
-
-                            </tr>
-                        </thead>
-                    </table>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
                 </p>
-                <a href="#" target="_blank">Open Link</a>
+                <a href="http://markrabey.com" target="_blank">Open Link</a>
             </div>
             <div class="modal__footer">
                 <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">

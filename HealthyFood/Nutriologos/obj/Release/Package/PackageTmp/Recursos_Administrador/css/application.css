@@ -725,6 +725,7 @@ body {
  */
 main {
     display: block;
+    background-image: url('https://www.infobae.com/new-resizer/UxpmCeFGsOFIbVIkaNBPadh-jHw=/1200x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06145550/FrutasyVerduras.jpg')
 }
 
 /*
@@ -7743,7 +7744,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
 
 .mdl-menu__outline {
     display: block;
-    background: #1565c0;
+    background:#2e7d32;
     margin: 0;
     padding: 0;
     border: none;
@@ -8578,7 +8579,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
     min-height: 64px;
     max-height: 1000px;
     z-index: 3;
-    background-color: #1565c0;
+    background-color: #4caf50;
     color: rgb(0, 188, 212);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     transition-duration: 0.2s;
@@ -11475,7 +11476,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .mdl-textfield__label:after {
-    background-color: rgb(0, 188, 212);
+    background-color: rgb(255, 255, 255);
     bottom: 20px;
     content: '';
     height: 2px;
@@ -13129,7 +13130,7 @@ main {
 }
 
 .mdl-card__title {
-    background-color: #1565c0;
+    background-color: #4caf50;
 }
 
 .mdl-card__supporting-text {
@@ -13365,6 +13366,13 @@ main {
 
     .mdl-button.mdl-button--colored-blue.mdl-button--icon:not([disabled]) {
         color: #51a8f9;
+    }
+
+    .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]):hover {
+        background-color: #ff5722;
+    }
+    .mdl-button.mdl-button--colored-orange.mdl-button--icon:not([disabled]) {
+        color:#ff5722;
     }
 
     .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]):hover {
@@ -13751,13 +13759,13 @@ a {
         font-family: "Roboto", "Helvetica", "Arial", sans-serif;
         font-size: 16px;
         font-weight: 300;
-        color: #41afff;
+        color: white;
         letter-spacing: 0;
     }
 
     .mdl-list .list__item--border-top {
         background-clip: padding-box;
-        border-top: 1px solid rgba(255, 255, 255,0.1);
+        border-top: 1px solid rgba(4, 255, 130, 0.493);
     }
 
 .todo .mdl-card__supporting-text {
@@ -13937,7 +13945,7 @@ a {
             }
 
     .account-dropdown .mdl-list__item:hover .mdl-list__item-icon {
-        color: rgb(0, 188, 212);
+        color: rgb(255, 87, 34);
     }
 
 .account-dropdown .list__item--border-top {
@@ -14626,11 +14634,16 @@ a {
 
 .mdl-textfield input, .mdl-textfield textarea {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: #51a8f9;
+    color: black;
     font-size: 16px;
     font-weight: 300;
 }
-
+.mdl-textfield-search input, .mdl-textfield-search textarea {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
 .mdl-textfield.is-focused.getmdl-select input, .mdl-textfield.is-focused.getmdl-select textarea {
     font-weight: 300;
 }

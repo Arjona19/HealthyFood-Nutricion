@@ -83,14 +83,44 @@
         <div class="modal__content">
             <div class="modal__header">
                 <div class="modal__title">
-                    <h2 class="modal__title-text">Modal</h2>
+                    <h2 class="modal__title-text">Agregar Ingredientes</h2>
                 </div>
             </div>
             <div class="modal__text">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laboriosam accusantium facere suscipit, alias accusamus corrupti consequatur at porro, voluptates commodi sed omnis voluptatem, ex officiis illum, architecto fugiat id?
-                </p>
-                <a href="http://markrabey.com" target="_blank">Open Link</a>
+                
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="firstName" value="Luke"/>
+                                    <label class="mdl-textfield__label" for="firstName">First name</label>
+                                </div>
+
+                                <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="secondName" value="Skywalker"/>
+                                    <label class="mdl-textfield__label" for="secondName">Second name</label>
+                                </div>
+                            </div>
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="birthday" value="25 May, 1977"/>
+                                    <label class="mdl-textfield__label" for="birthday">Birthday</label>
+                                </div>
+
+                                <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                    <input class="mdl-textfield__input" value="Male" type="text" id="gender" readonly tabIndex="-1"/>
+
+                                    <label class="mdl-textfield__label" for="gender">Gender</label>
+
+                                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender">
+                                        <li class="mdl-menu__item">Male</li>
+                                        <li class="mdl-menu__item">Female</li>
+                                    </ul>
+
+                                    <label for="gender">
+                                        <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+                                    </label>
+                                </div>
             </div>
             <div class="modal__footer">
                 <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
