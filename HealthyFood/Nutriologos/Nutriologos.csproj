@@ -133,6 +133,7 @@
     <Content Include="Recursos_Administrador\css\docs.min.css" />
     <Content Include="Recursos_Administrador\css\lib\getmdl-select.min.css" />
     <Content Include="Recursos_Administrador\css\lib\nv.d3.css" />
+    <Content Include="Recursos_Administrador\css\palette.css" />
     <Content Include="Recursos_Administrador\forms.html" />
     <Content Include="Recursos_Administrador\Imagenes\LogoH.png" />
     <Content Include="Recursos_Administrador\images\active_marker.png" />

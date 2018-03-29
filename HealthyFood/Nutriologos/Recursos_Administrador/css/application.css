@@ -725,7 +725,7 @@ body {
  */
 main {
     display: block;
-    background-color:#d4d4d4;
+    background:rgb(215, 215, 215);
 }
 
 /*
@@ -4802,7 +4802,7 @@ input.mdl-button[type="submit"] {
 }
 
     .mdl-button--accent.mdl-button--accent .mdl-ripple {
-        background: #ffffff;
+        background: #0cb624;
     }
 
     .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
