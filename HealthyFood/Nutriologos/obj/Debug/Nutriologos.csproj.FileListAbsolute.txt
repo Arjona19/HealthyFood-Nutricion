@@ -152,6 +152,7 @@ C:\Users\Santiago\Documents\Formatos-Lug\VersionSalamanca\Nutriologos\bin\es\Sys
 C:\Users\Santiago\Documents\Formatos-Lug\VersionSalamanca\Nutriologos\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Santiago\Documents\Formatos-Lug\VersionSalamanca\Nutriologos\obj\Debug\Nutriologos.dll
 C:\Users\Santiago\Documents\Formatos-Lug\VersionSalamanca\Nutriologos\obj\Debug\Nutriologos.pdb
+C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\ApplicationInsights.config
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\roslyn\csc.exe
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -175,7 +176,6 @@ C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Micros
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.AI.Web.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\System.Web.Helpers.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\System.Web.Mvc.dll
@@ -201,5 +201,6 @@ C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\Sys
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.csprojResolveAssemblyReference.cache
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.pdb
