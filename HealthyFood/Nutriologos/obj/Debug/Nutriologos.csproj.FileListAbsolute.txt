@@ -201,6 +201,5 @@ C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\Sys
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.csprojResolveAssemblyReference.cache
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.dll
 C:\Users\Santiago\Documents\HealthyFood - V.2\HealthyFood\Nutriologos\obj\Debug\Nutriologos.pdb

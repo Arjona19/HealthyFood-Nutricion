@@ -13370,10 +13370,10 @@ main {
     }
 
     .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]):hover {
-        background-color: #ff5722;
+        background-color: #FF9800;
     }
     .mdl-button.mdl-button--colored-orange.mdl-button--icon:not([disabled]) {
-        color:#ff5722;
+        color:#FF9800;
     }
 
     .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]):hover {
