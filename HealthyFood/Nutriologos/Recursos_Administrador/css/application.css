@@ -4361,7 +4361,7 @@ ul, ol {
         width: 22px;
         height: 22px;
         border-radius: 50%;
-        background: rgb(0, 188, 212);
+        background: #FF9800;
         color: rgb(255, 255, 255);
     }
 
@@ -4709,20 +4709,20 @@ input.mdl-button[type="submit"] {
     }
 
     .mdl-button--fab.mdl-button--colored {
-        background: rgb(255, 82, 82);
+        background: #FF9800;
         color: #ffffff;
     }
 
         .mdl-button--fab.mdl-button--colored:hover {
-            background-color: #ff4c4c;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored:focus:not(:active) {
-            background-color: #f23d3d;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored:active {
-            background-color: #f23d3d;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored .mdl-ripple {

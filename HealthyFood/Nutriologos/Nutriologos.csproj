@@ -210,6 +210,7 @@
     <Content Include="Recursos_Inicio\res\background3.jpg" />
     <Content Include="Recursos_Inicio\res\HealthyFood.png" />
     <Content Include="Recursos_Inicio\res\icon-healthyfood.png" />
+    <Content Include="Recursos_Inicio\res\logo-H.png" />
     <Content Include="Recursos_Inicio\res\Logo3%402x.png" />
     <Content Include="Recursos_Inicio\res\LogoH.png" />
     <Content Include="Recursos_Inicio\res\mipmap-hdpi\ic_launcher.png" />
