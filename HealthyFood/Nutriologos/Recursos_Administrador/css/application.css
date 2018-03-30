@@ -13062,7 +13062,7 @@ main {
 
         .mdl-layout__header-row .avatar-dropdown > span {
             color: rgba(255, 255, 255, 255);
-            padding-right: 16px;
+            padding-right: 0px;
         }
 
     .mdl-layout__header-row .mdl-textfield {
