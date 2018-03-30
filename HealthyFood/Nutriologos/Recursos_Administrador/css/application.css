@@ -5887,7 +5887,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
     border-collapse: collapse;
     white-space: nowrap;
     font-size: 16px;
-    background-color: rgb(255,255,255);
+    background-color: #ffffff;
 }
 
     .mdl-data-table thead {
@@ -8505,7 +8505,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
     background-color: rgba(0, 0, 0, 0.25);
-    color: rgb(0, 188, 212);
+    color: #4caf50;
 }
 
 @media screen and (min-width: 1441px) {
@@ -11349,6 +11349,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     display: inline-block;
     box-sizing: border-box;
     width: 300px;
+    margin-left:15%;
     max-width: 100%;
     margin: 0;
     padding: 20px 0;
@@ -13025,19 +13026,19 @@ main {
             }
 
         .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
-            border-left: 2px solid rgb(0, 188, 212);
+            border-left: 2px solid #4caf50;
         }
 
             .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current .material-icons {
-                color: rgb(0, 188, 212);
+                color: #4caf50;
             }
 
         .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-            color: rgb(0, 188, 212);
+            color: #4caf50;
         }
 
             .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover .material-icons {
-                color: rgb(0, 188, 212);
+                color: #4caf50;
             }
 
 .mdl-layout__header-row {
@@ -13551,7 +13552,7 @@ a {
 .mdl-data-table {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
-    background-color:#e8e8e8;
+    background-color:#ffffff;
     color: rgb(78, 78, 78);
     border: 1px;
 }

@@ -305,6 +305,7 @@
     <Content Include="Views\Administrador\Nutriologos.cshtml" />
     <Content Include="Views\Administrador\Pacientes.cshtml" />
     <Content Include="Views\Administrador\Pagos.cshtml" />
+    <Content Include="Views\Administrador\Perfil.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
