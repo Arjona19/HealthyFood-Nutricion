@@ -12997,7 +12997,7 @@ main {
 
     .mdl-layout__drawer .mdl-navigation {
         flex-grow: 1;
-        padding-top: 48px;
+        padding-top: 0px;
         padding-bottom: 8px;
     }
 
@@ -13056,8 +13056,8 @@ main {
         }
 
         .mdl-layout__header-row .avatar-dropdown > img {
-            width: 32px;
-            height: 32px;
+            width: 52px;
+            height: 52px;
         }
 
         .mdl-layout__header-row .avatar-dropdown > span {

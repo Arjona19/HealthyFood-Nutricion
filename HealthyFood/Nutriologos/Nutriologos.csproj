@@ -136,6 +136,7 @@
     <Content Include="Recursos_Administrador\css\palette.css" />
     <Content Include="Recursos_Administrador\forms.html" />
     <Content Include="Recursos_Administrador\Imagenes\LogoH.png" />
+    <Content Include="Recursos_Administrador\Imagenes\Title.png" />
     <Content Include="Recursos_Administrador\images\active_marker.png" />
     <Content Include="Recursos_Administrador\images\background.png" />
     <Content Include="Recursos_Administrador\images\card.jpg" />
