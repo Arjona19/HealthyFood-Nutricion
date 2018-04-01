@@ -3,6 +3,16 @@
     ViewBag.Title = "Inicio";
     Layout = "~/Views/Administrador/Pagina_Maestra.cshtml";
 }
+<script>
+        $(document).ready(function () {
+            window.onload = function () {
+                $('#preloader').delay(5000).fadeOut();
+                $('#load').delay(5050).fadeOut('slow');
+                $('#site-content').delay(5050).fadeIn('slow');
+            }
+        });
+
+</script>
 <div class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
         <div class="mdl-card  mdl-shadow--2dp todo">
