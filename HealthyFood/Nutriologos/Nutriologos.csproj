@@ -130,6 +130,7 @@
     <Content Include="Global.asax" />
     <Content Include="Recursos_Administrador\Blank_Page.html" />
     <Content Include="Recursos_Administrador\css\application.css" />
+    <Content Include="Recursos_Administrador\css\cards.css" />
     <Content Include="Recursos_Administrador\css\docs.min.css" />
     <Content Include="Recursos_Administrador\css\lib\getmdl-select.min.css" />
     <Content Include="Recursos_Administrador\css\lib\nv.d3.css" />

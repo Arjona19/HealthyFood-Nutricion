@@ -9,7 +9,7 @@
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
+ * distributed under the License is distribumainted on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
@@ -725,7 +725,7 @@ body {
  */
 main {
     display: block;
-    background-image: url('https://www.infobae.com/new-resizer/UxpmCeFGsOFIbVIkaNBPadh-jHw=/1200x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06145550/FrutasyVerduras.jpg')
+    background:rgb(215, 215, 215);
 }
 
 /*
@@ -4361,7 +4361,7 @@ ul, ol {
         width: 22px;
         height: 22px;
         border-radius: 50%;
-        background: rgb(0, 188, 212);
+        background: #FF9800;
         color: rgb(255, 255, 255);
     }
 
@@ -4709,20 +4709,20 @@ input.mdl-button[type="submit"] {
     }
 
     .mdl-button--fab.mdl-button--colored {
-        background: rgb(255, 82, 82);
+        background: #FF9800;
         color: #ffffff;
     }
 
         .mdl-button--fab.mdl-button--colored:hover {
-            background-color: #ff4c4c;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored:focus:not(:active) {
-            background-color: #f23d3d;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored:active {
-            background-color: #f23d3d;
+            background-color: #FF9800;
         }
 
         .mdl-button--fab.mdl-button--colored .mdl-ripple {
@@ -4802,7 +4802,7 @@ input.mdl-button[type="submit"] {
 }
 
     .mdl-button--accent.mdl-button--accent .mdl-ripple {
-        background: #ffffff;
+        background: #0cb624;
     }
 
     .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
@@ -5887,7 +5887,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
     border-collapse: collapse;
     white-space: nowrap;
     font-size: 16px;
-    background-color: rgb(255,255,255);
+    background-color: #ffffff;
 }
 
     .mdl-data-table thead {
@@ -8505,7 +8505,7 @@ fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container,
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
     background-color: rgba(0, 0, 0, 0.25);
-    color: rgb(0, 188, 212);
+    color: #4caf50;
 }
 
 @media screen and (min-width: 1441px) {
@@ -11349,6 +11349,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     display: inline-block;
     box-sizing: border-box;
     width: 300px;
+    margin-left:15%;
     max-width: 100%;
     margin: 0;
     padding: 20px 0;
@@ -11379,7 +11380,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-textfield__input {
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(28, 236, 91, 0.2);
     display: block;
     font-size: 16px;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -11402,6 +11403,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-textfield.is-focused .mdl-textfield__input {
     outline: none;
+    border-bottom-color: #2e7d32;
 }
 
 .mdl-textfield.is-invalid .mdl-textfield__input {
@@ -11412,8 +11414,8 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 .mdl-textfield.is-disabled .mdl-textfield__input {
     background-color: transparent;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px dotted rgba(27, 250, 165, 0.952);
+    color: rgba(17, 228, 10, 0.6);
 }
 
 .mdl-textfield textarea.mdl-textfield__input {
@@ -12969,7 +12971,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 main {
-    
+    background-color: #ccc;
     background-size: cover;
 }
 
@@ -12996,7 +12998,7 @@ main {
 
     .mdl-layout__drawer .mdl-navigation {
         flex-grow: 1;
-        padding-top: 48px;
+        padding-top: 0px;
         padding-bottom: 8px;
     }
 
@@ -13024,19 +13026,19 @@ main {
             }
 
         .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current {
-            border-left: 2px solid rgb(0, 188, 212);
+            border-left: 2px solid #4caf50;
         }
 
             .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--current .material-icons {
-                color: rgb(0, 188, 212);
+                color: #4caf50;
             }
 
         .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-            color: rgb(0, 188, 212);
+            color: #4caf50;
         }
 
             .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover .material-icons {
-                color: rgb(0, 188, 212);
+                color: #4caf50;
             }
 
 .mdl-layout__header-row {
@@ -13055,13 +13057,13 @@ main {
         }
 
         .mdl-layout__header-row .avatar-dropdown > img {
-            width: 32px;
-            height: 32px;
+            width: 52px;
+            height: 52px;
         }
 
         .mdl-layout__header-row .avatar-dropdown > span {
             color: rgba(255, 255, 255, 255);
-            padding-right: 16px;
+            padding-right: 0px;
         }
 
     .mdl-layout__header-row .mdl-textfield {
@@ -13369,10 +13371,10 @@ main {
     }
 
     .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-orange.mdl-button--raised:not([disabled]):hover {
-        background-color: #ff5722;
+        background-color: #FF9800;
     }
     .mdl-button.mdl-button--colored-orange.mdl-button--icon:not([disabled]) {
-        color:#ff5722;
+        color:#FF9800;
     }
 
     .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]), .mdl-button.mdl-button--colored-yellow.mdl-button--raised:not([disabled]):hover {
@@ -13550,7 +13552,7 @@ a {
 .mdl-data-table {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
-    background-color:#e8e8e8;
+    background-color:#ffffff;
     color: rgb(78, 78, 78);
     border: 1px;
 }
