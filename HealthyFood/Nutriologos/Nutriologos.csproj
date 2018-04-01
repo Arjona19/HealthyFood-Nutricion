@@ -161,6 +161,7 @@
     <Content Include="Recursos_Administrador\index.html" />
     <Content Include="Recursos_Administrador\js\d3.js" />
     <Content Include="Recursos_Administrador\js\getmdl-select.min.js" />
+    <Content Include="Recursos_Administrador\js\index.js" />
     <Content Include="Recursos_Administrador\js\login.js" />
     <Content Include="Recursos_Administrador\js\material-modal.min.js" />
     <Content Include="Recursos_Administrador\js\material.js" />
