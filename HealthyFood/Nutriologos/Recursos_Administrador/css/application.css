@@ -5336,7 +5336,7 @@ input.mdl-button[type="submit"] {
     margin: 0;
     cursor: pointer;
     overflow: hidden;
-    border: 2px solid rgb(81, 168, 249);
+    border:2px solid rgb(76, 175, 80);
     border-radius: 2px;
     z-index: 2;
 }
@@ -14176,7 +14176,7 @@ a {
         width: 20%;
         margin-top: 22px;
         margin-bottom: 22px;
-        color: white;
+        color: black;
     }
 
         .employer-form .mdl-radio span:first-of-type {
@@ -14270,7 +14270,7 @@ a {
     }
 
     .employer-form__general_skills .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-        color: rgb(0, 188, 212);
+        color: rgb(76, 175, 80);
     }
 
     .employer-form__general_skills textarea {
@@ -14369,9 +14369,9 @@ a {
 
 .form__article h3 {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 20px;s
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
+    color:rgb(0, 0, 0);
     margin-top: 4px;
     margin-bottom: 20px;
 }
