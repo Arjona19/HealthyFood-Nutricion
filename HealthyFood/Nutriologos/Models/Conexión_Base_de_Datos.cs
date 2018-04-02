@@ -17,8 +17,7 @@ namespace Nutriologos.Models
             
         public SqlConnection ConectarBD()
         {
-            string cad_con = "Data Source =Santiago-Arjona//Santiago ; Initial Catalog = Proyecto_cocina; Integrated Security = True";
-            con = new SqlConnection(cad_con);
+            con = new SqlConnection("Data Source = Santiago-Arjona\\Santiago; Initial Catalog = HealthyFood; Integrated Security = True");
             return con;
         }
 
@@ -105,7 +104,9 @@ namespace Nutriologos.Models
         public DataTable Tabla_Consultada(string Sql)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(Sql, ConectarBD());
+            AbrirConexion();
             DataTable Tabla_Virtual = new DataTable();
+            CerrarConexion();
             adapter.Fill(Tabla_Virtual);
             return Tabla_Virtual;
         }

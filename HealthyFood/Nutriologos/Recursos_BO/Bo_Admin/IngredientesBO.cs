@@ -9,13 +9,15 @@ namespace Nutriologos.Recursos_BO.Bo_Admin
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public string Cantidad { get; set; }
+        public string unidad { get; set; }
         public string Imagen { get; set; }
         public string Energia { get; set; }
         public string Proteina { get; set; }
         public string Loquidos { get; set; }
         public string Hidratos { get; set; }
         public string Fibra{ get; set; }
-        public int Id_Clasificion { get; set; }
+        public string Id_Clasificion { get; set; }
 
     }
 }

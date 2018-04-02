@@ -17,33 +17,15 @@ namespace Nutriologos.Models
             return conex.EjecutarComando(sql);
         }
 
-        public int Eliminar_Clasificacion(ClasificacionBO ObjP)
-        {
-            string sql = "Delete from Clasificaciones where ID = '" + ObjP.Id + "'";
-            return conex.EjecutarComando(sql);
-        }
-
-        public int Actualizar_Clasificacion(ClasificacionBO ObjP)
-        {
-            string sql = "Update Clasificaciones Set Nombre='" + ObjP.Nombre + "' where ID='" + ObjP.Id + "'";
-            return conex.EjecutarComando(sql);
-        }
-
-        public ClasificacionBO Obtener_Clasificacion(int id)
-        {
-            var ex = new ClasificacionBO();
-            String strBuscar = string.Format("Select Id, Nombre FROM Clasificaciones where Id ={0}", id);
-            DataTable datos = conex.Tabla_Consultada(strBuscar);
-            DataRow row = datos.Rows[0];
-            ex.Id = Convert.ToInt32(row["Id"]);
-            ex.Nombre = row["Nombre"].ToString();
-            return ex;
-        }
-
         public DataTable Tabla_Clasificacion()
         {
-            string Con_SQL = string.Format("Select Id, Nombre FROM Clasificaciones");
+            string Con_SQL = string.Format("select Id, Nombre, [Valor Hidratos], [Valor Energia], [Valor Lipidos], [Valor Proteinas] from Clasificaciones");
             return conex.Tabla_Consultada(Con_SQL);
+        }
+        public int Eliminar_Clasificacion(ClasificacionBO obj)
+        {
+            string sql = "Delete from Clasificaciones where Id = '" + obj.Id + "'";
+            return conex.EjecutarComando(sql);
         }
 
     }

@@ -1,6 +1,8 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
+
 
 <script>
         window.onload = function () {
@@ -11,7 +13,7 @@
 </script>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="icon" type="" href="~/Recursos_Administrador/Imagenes/logo-H.png">
+    <link rel="icon" type="/Recursos_Administrador/image/png" href="~/Recursos_Administrador/Imagenes/logo-H.png">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -230,7 +232,7 @@
                     </ul>
 
                     <div class="avatar-dropdown" id="icon">
-                        <span>Administrador</span>
+                        <span>Empresa</span>
                         <img class="circle" src="~/Recursos_Administrador/Imagenes/logo-H.png" />
 
 
@@ -241,7 +243,7 @@
                         <li class="mdl-list__item mdl-list__item--two-line">
                             <span class="mdl-list__item-primary-content">
                                 <span class="material-icons mdl-list__item-avatar"></span>
-                                <span>Admin</span>
+                                <span>Empresa</span>
                                 <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
                             </span>
                         </li>
@@ -294,51 +296,7 @@
                 </div>
             </header>
 
-            <div class="mdl-layout__drawer">
-                <nav class="mdl-navigation">
-                    <div class="mdl-card__title" style="background:url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=08cb0ebaadb99995755a696a9710b229&auto=format&fit=crop&w=931&q=80');">
-                        <div class="mdl-card__title-text"><img class="circle" src="/Recursos_Administrador/Imagenes/Title.png" width="220" height="90" style="margin:1px" /></div>
-                    </div>
-
-                    <a class="mdl-navigation__link mdl-navigation__link--current" href="@Url.Action("Inicio","Administrador")">
-                        <i class="material-icons" role="presentation">dashboard</i>
-                        Inicio
-                    </a>
-
-
-                    <a class="mdl-navigation__link" href="@Url.Action("Ingredientes","Administrador")">
-                        <i class="material-icons">local_dining</i>
-                        Ingredientes
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Unidad","Administrador")">
-                        <i class="material-icons">assignment</i>
-                        Tipo Unidad
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Clasificaciones","Administrador")">
-                        <i class="material-icons">assignment turned in</i>
-                        clasificación
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Enfermedades","Administrador")">
-                        <i class="material-icons">camera enhance</i>
-                        Enfermedades
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Empresas","Administrador")">
-                        <i class="material-icons">store</i>
-                        Empresas
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Nutriologos","Administrador")">
-                        <i class="material-icons">perm_identity</i>
-                        Nutriologos
-                    </a>
-                    <a class="mdl-navigation__link" href="@Url.Action("Pagos","Administrador")">
-                        <i class="material-icons">attach_money</i>
-                        Ganancias
-                    </a>
-
-                    <div class="mdl-layout-spacer"></div>
-
-                </nav>
-            </div>
+         
 
             <main id="site-content" class="mdl-layout__content" style="background-color:gainsboro;">
 

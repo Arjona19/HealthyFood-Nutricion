@@ -12,9 +12,9 @@ namespace Nutriologos.Models
 
         Conexión_Base_de_Datos conex = new Conexión_Base_de_Datos();
 
-        public int AgregarIngrediente(IngredientesBO ObjP)
+        public int AgregarIngrediente(IngredientesBO ObjP) 
         {
-            string sql = "Insert into Ingredientes (Nombre, Imagen, Energia, Proteina, Liquidos, Hidratos, Fibra, Id_Clasificacion) values ('" + ObjP.Nombre + "', '" + ObjP.Imagen + "', '" + ObjP.Energia + "', '" + ObjP.Proteina + "', , '" + ObjP.Loquidos + "', '" + ObjP.Hidratos + "', , '" + ObjP.Fibra + "', '" + ObjP.Id_Clasificion + "')";
+            string sql = "Insert into Ingredientes (Nombre, Id_Unidad, Energia, Proteina, Liquidos, Hidratos, Fibra, Id_Clasificacion, Cantidad) values ('" + ObjP.Nombre + "', '" + ObjP.unidad + "', '" + ObjP.Energia + "', '" + ObjP.Proteina + "', '" + ObjP.Loquidos + "', '" + ObjP.Hidratos + "', '" + ObjP.Fibra + "', '" + ObjP.Id_Clasificion + "', '" + ObjP.Cantidad + "')";
             return conex.EjecutarComando(sql);
 
         }
@@ -46,9 +46,9 @@ namespace Nutriologos.Models
             return ex;
         }
 
-        public DataTable TablaINgredientes()
+        public DataTable TablaIngredientes()
         {
-            string Con_SQL = string.Format("Select ID, Nombre, Imagen, Energia, Proteina, Liquidos, Hidratos, Fibra FROM Ingredientes");
+            string Con_SQL = string.Format("Select I.ID, I.Nombre, I.Imagen, I.Energia, I.Proteina, I.Liquidos, I.Hidratos, I.Fibra, C.Nombre AS 'Clasificación', U.Nombre AS 'Unidad' FROM Ingredientes I inner join Clasificaciones C on I.Id_Clasificacion = C.Id inner join [Tipo de Unidad] U on I.Id_Unidad = U.Id");
             return conex.Tabla_Consultada(Con_SQL);
         }
 

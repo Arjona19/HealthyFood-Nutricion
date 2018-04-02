@@ -1,0 +1,30 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Empresa/Pagina_Maestra.cshtml";
+}
+
+<link href="/Recursos_Administrador/css/cards.css" rel="stylesheet">
+<link href="/Recursos_Administrador/css/docs.min.css" rel="stylesheet">
+<script src="/Recursos_Administrador/js/material-modal.min.js"></script>
+
+
+@foreach (DataRow row in Model.Rows)
+{
+    <tr id="@row["Id"]">
+        <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone ">
+
+            <div class="card">
+                <figure class="front ">
+                    <img src="~/Recursos_Administrador/images/centro.jpg" alt="front">
+                    <div class="caption">
+                        <h2><span>@row["Nombre"]</span></h2>
+                        <p>@row["Correo"]</p>
+                        <a class="modal__trigger" href="#" data-modal="#modal">View more</a>
+                    </div>
+                </figure>
+
+            </div>
+        </div>
+    </tr>
+}

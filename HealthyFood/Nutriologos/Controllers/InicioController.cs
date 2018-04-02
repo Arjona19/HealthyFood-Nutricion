@@ -12,33 +12,68 @@ namespace Nutriologos.Controllers
 {
     public class InicioController : Controller
     {
+        Login Modal = new Models.Login();
+        string Nombre;
+        int bandera = 0;
+
         // Pagina de inicio
         public ActionResult Login()
         {
             return View();
         }
         //Motodo Para Loguearse
-        public ActionResult Loguearse(string Nombre, string contraseña)
+        public ActionResult Principal(string Usuario, string Contraseña)
         {
-            LoginBO validaciones = new LoginBO();
 
-            validaciones.Usuario = Nombre;
-            validaciones.contraseña = contraseña;
-
-            Models.Login logueo = new Models.Login();
-
-            logueo.ValidarUsuario(validaciones);
-
-            if(logueo.ValidarUsuario(validaciones) != null)
+            if (Usuario != null && Contraseña != null)
             {
-                return View("~/Views/Administrador/Inicio.cshtml");
+
+                DataTable datos = Modal.Inicio_sesion(Usuario, Contraseña);
+                if (datos.Rows.Count == 1)
+                {
+                    bandera = 1;
+                    Nombre = datos.Rows[0][5].ToString();
+                    if (datos.Rows[0][1].ToString() == "2")
+                    {
+
+                        Session["Nombre"] = "Usuario " + Nombre;
+
+                    }
+                    else if (datos.Rows[0][1].ToString() == "3")
+                    {
+
+                        Session["Nombre"] = "Administrador " + Nombre;
+                        return View("~/Views/Administrador/Inicio.cshtml");
+                    }
+                }
+                else
+                {
+                    bandera = 3;
+                }
+
             }
-            else
+
+            switch (bandera)
             {
-                return View("~/Views/Inicio/Login.cshtml");
+                case 1:
+                    ViewBag.SessionActive = 1;
+                    break;
+                case 2:
+                    ViewBag.Register = 2;
+                    break;
+                case 3:
+                    ViewBag.Error = 3;
+                    break;
+                case 4:
+                    ViewBag.Warning = 4;
+                    break;
+                default:
+                    break;
             }
 
 
+
+            return View();
         }
 
 

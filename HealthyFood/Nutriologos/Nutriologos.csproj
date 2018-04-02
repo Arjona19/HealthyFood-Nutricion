@@ -235,18 +235,26 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categorias.cs" />
     <Compile Include="Models\Conexión_Base_de_Datos.cs" />
+    <Compile Include="Models\Empresas.cs" />
+    <Compile Include="Models\Encryptar.cs" />
+    <Compile Include="Models\Enfermedades.cs" />
     <Compile Include="Models\Ingredientes.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Nutriologos.cs" />
+    <Compile Include="Models\Tipo_Unidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursos_BO\Bo_Admin\ClasificacionBO.cs" />
     <Compile Include="Recursos_BO\Bo_Admin\EnfermedadBO.cs" />
     <Compile Include="Recursos_BO\Bo_Admin\IngredientesBO.cs" />
     <Compile Include="Recursos_BO\Bo_Admin\Nutriologo.cs" />
+    <Compile Include="Recursos_BO\Bo_Admin\UnidadesBO.cs" />
     <Compile Include="Recursos_BO\Bo_Admin\UsuariosBO.cs" />
     <Compile Include="Recursos_BO\BO_Inicio\LoginBO.cs" />
   </ItemGroup>
