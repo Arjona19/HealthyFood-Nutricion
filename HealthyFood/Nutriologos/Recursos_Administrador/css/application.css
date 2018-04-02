@@ -11403,7 +11403,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-textfield.is-focused .mdl-textfield__input {
     outline: none;
-    border-bottom-color: rgb(0,188,212);
+    border-bottom-color: #4caf50;
 }
 
 .mdl-textfield.is-invalid .mdl-textfield__input {
