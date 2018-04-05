@@ -7,6 +7,8 @@ using Nutriologos.Recursos_BO;
 using Nutriologos.Models;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Threading.Tasks;
+using System.Data;
 
 namespace Nutriologos.Controllers
 {
@@ -60,7 +62,7 @@ namespace Nutriologos.Controllers
         public ActionResult Nutriologos()
         {
             Models.Nutriologos Modal = new Models.Nutriologos();
-             
+
             return View(Modal.Tabla_Nutriologo_Presentacion());
         }
         //Perfil de los Pacientes
@@ -88,8 +90,8 @@ namespace Nutriologos.Controllers
         }
 
         //seccion de altas para agregar datos
-        
-         public ActionResult Agregar_ingredientes(string Nombre, string Cantidad, string unidad, string Clasificacion, string energia, string Proteina, string lipido, string hidrato, string fibra)
+
+        public ActionResult Agregar_ingredientes(string Nombre, string Cantidad, string unidad, string Clasificacion, string energia, string Proteina, string lipido, string hidrato, string fibra)
         {
             Ingredientes obj_Modelo = new Models.Ingredientes();
             Recursos_BO.Bo_Admin.IngredientesBO obj_BO = new Recursos_BO.Bo_Admin.IngredientesBO();
@@ -152,7 +154,7 @@ namespace Nutriologos.Controllers
         //en esta seccion de hacen las consultas de los datos para antes de actualizar
         public ActionResult Consultar_Categoria(Recursos_BO.Bo_Admin.ClasificacionBO obj)
         {
-            
+
             int id = obj.Id;
             Conexión_Base_de_Datos con = new Conexión_Base_de_Datos();
             SqlCommand cmd = new SqlCommand("select Nombre, [Valor Hidratos], [Valor Energia], [Valor Lipidos], [Valor Proteinas] from Clasificaciones where Id = '" + id + "' ", con.ConectarBD());
@@ -183,7 +185,7 @@ namespace Nutriologos.Controllers
             }
             Unidad();
             return View("Unidad");
-         }
+        }
 
         public ActionResult Consultar_Enfermedad(Recursos_BO.Bo_Admin.EnfermedadBO obj)
         {
@@ -269,6 +271,42 @@ namespace Nutriologos.Controllers
 
             return View(NombreUnidad);
         }
+        public Recursos_BO.Bo_Admin.IngredientesBO[] Datos(int ID)
+        {
+            int i; 
+            Ingredientes modal = new Ingredientes();
+            DataTable datos = new DataTable();
+            datos = modal.TablaIngredientes_(ID);
+            Recursos_BO.Bo_Admin.IngredientesBO[] obj = new Recursos_BO.Bo_Admin.IngredientesBO[datos.Rows.Count];
+            i = 0;
+            while (i < datos.Rows.Count)
+            {
+                obj[i] = new Recursos_BO.Bo_Admin.IngredientesBO();
+             
+                obj[i].Nombre = datos.Rows[i]["Nombre"].ToString();
+                obj[i].Id_Clasificion = datos.Rows[i]["Clasificacion"].ToString();
+                obj[i].Energia = datos.Rows[i]["Energia"].ToString();
+                obj[i].Proteina = datos.Rows[i]["Proteina"].ToString();
+                obj[i].Hidratos = datos.Rows[i]["Hidrato"].ToString();
+                obj[i].Loquidos = datos.Rows[i]["Lipido"].ToString();
+                obj[i].Fibra = datos.Rows[i]["Fibra"].ToString();
+            }
+            return obj;
 
+        }
+        [HttpPost]
+        public JsonResult datos(int ID)
+        {
+            var resultado = new Response();
+            resultado.ok = true;
+            resultado.Mensaje = ID.ToString();
+            return Json(resultado);
+        }
+        public class Response
+        {
+            public bool ok { get; set; }
+            public string Mensaje { get; set; }
+
+        }
     }
 }

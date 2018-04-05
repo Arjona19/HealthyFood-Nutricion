@@ -134,6 +134,7 @@
     <Content Include="Recursos_Administrador\css\docs.min.css" />
     <Content Include="Recursos_Administrador\css\lib\getmdl-select.min.css" />
     <Content Include="Recursos_Administrador\css\lib\nv.d3.css" />
+    <Content Include="Recursos_Administrador\css\Notificaciones.css" />
     <Content Include="Recursos_Administrador\css\palette.css" />
     <Content Include="Recursos_Administrador\forms.html" />
     <Content Include="Recursos_Administrador\Imagenes\LogoH.png" />
@@ -159,6 +160,7 @@
     <Content Include="Recursos_Administrador\images\watch_white.svg" />
     <Content Include="Recursos_Administrador\images\weather_bck.png" />
     <Content Include="Recursos_Administrador\index.html" />
+    <Content Include="Recursos_Administrador\js\Acciones.js" />
     <Content Include="Recursos_Administrador\js\d3.js" />
     <Content Include="Recursos_Administrador\js\getmdl-select.min.js" />
     <Content Include="Recursos_Administrador\js\index.js" />

@@ -51,6 +51,10 @@ namespace Nutriologos.Models
             string Con_SQL = string.Format("Select I.ID, I.Nombre, I.Imagen, I.Energia, I.Proteina, I.Liquidos, I.Hidratos, I.Fibra, C.Nombre AS 'Clasificación', U.Nombre AS 'Unidad' FROM Ingredientes I inner join Clasificaciones C on I.Id_Clasificacion = C.Id inner join [Tipo de Unidad] U on I.Id_Unidad = U.Id");
             return conex.Tabla_Consultada(Con_SQL);
         }
-
+        public DataTable TablaIngredientes_(int ID)
+        {
+            string Con_SQL = string.Format("Select ID, Nombre FROM Ingredientes where ID = {0}", ID);
+            return conex.Tabla_Consultada(Con_SQL);
+        }
     }
 }
