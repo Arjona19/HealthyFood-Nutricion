@@ -167,7 +167,7 @@
                             <!--Acciones-->
                             @*@using (Ajax.BeginForm("Consultar_Ingrediente", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
                             {*@
-                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue " onclick="get('@row["Id"]')" >
+                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue modal__trigger" data-modal="#Actualizar">
                                     <i class="material-icons">create</i>
                                     <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" ></span></span>
                                 </button>
@@ -177,7 +177,7 @@
                             @*@using (Ajax.BeginForm("Eliminar_Ingrediente", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
                             {*@
 
-                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red"  >
+                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red modal__trigger" data-modal="#Eliminar" >
                                     <i class="material-icons">delete</i>
                                     <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                 </button>
@@ -457,14 +457,21 @@
         </div>
     </div>
 </div>
-
+<div id="Noti_Agregar" class="notif " style="background-color:#4caf50">
+    Ingrediente Agregado
+</div>
 <div id="Noti_Eliminar" class="notif " style="background-color:#e44242">
     Ingrediente Eliminado
 </div>
+<div id="Noti_Actualizar" class="notif " style="background-color:rgb(255, 152, 0)">
+    Ingrediente Actualizado
+</div>
 <script>
-    document.getElementById("Act").onclick = function () {
-  
+    window.onload = post();
+    function post() {
+        document.getElementById("Noti_Actualizar").classList.add("peek");
     }
+   
 </script>
 <script src="~/Recursos_Administrador/js/Acciones.js"></script>
 <link href="~/Recursos_Administrador/css/Notificaciones.css" rel="stylesheet" />
