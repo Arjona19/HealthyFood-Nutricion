@@ -55,6 +55,10 @@
     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp animated fadeInDown ">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Lista de tipos de Unidad</h2>
+            <button id="agr" class="mdl-button mdl-js-button  mdl-button--colored-orange mdl-shadow--8dp modal__trigger" style="left:66%; background-color:rgb(255, 152, 0) " data-modal="#Agregar">
+                <i class="material-icons">add</i>
+                <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating"></span></span>
+            </button>
         </div>
         <table class="mdl-data-table mdl-js-data-table projects-table">
             <thead>
@@ -194,6 +198,222 @@
     </div>
 </div>
 
+
+@*-------Nuevo--------*@
+@using (Ajax.BeginForm("Agregar_unidad", "Administrador", new AjaxOptions() { HttpMethod = "POST" }))
+{
+    <div id="Agregar" class="modal modal__bg">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <div class="modal__title" style="background-color:#4caf50">
+                        <h2 class="modal__title-text" style="color:#fff">Nueva Unidad</h2>
+                    </div>
+                </div>
+                <div class="modal__text">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="firstName" name="Nombre" value="" />
+                                    <label class="mdl-textfield__label" for="firstName">Nombre de la unidad</label>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                <div class="modal__footer">
+                    <a  class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
+                        Cerrar
+                    </a>
+                    <button class="mdl-button  mdl-js-button" style="background-color:#4caf50; left:5%;">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div id="Actualizar" class="modal modal__bg ">
+    <div class="modal__dialog">
+        <div id="cont" class="modal__content">
+            <div class="modal__header">
+                <div class="modal__title" style="background-color:rgb(255, 152, 0) ">
+                    <h2 class="modal__title-text" style="color:#fff">Actualizar Ingrediente</h2>
+                </div>
+            </div>
+            <div id="padre">
+                <div id="info" class="modal__text">
+
+                    <div class="mdl-grid">
+
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="firstName" name="Nombre" value="" />
+                                    <label class="mdl-textfield__label" for="firstName">Nombre</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="unidad" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" value="">
+                                    <label class="mdl-textfield__label" for="sample4">Unidad</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                                <div class="">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                        <input class="mdl-textfield__input" value="Male"  name="Clasificacion" type="text" id="gender" readonly tabIndex="-1" />
+                                        <label class="mdl-textfield__label" for="gender">Clasificación</label>
+                                        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender" style="background-color:#fff">
+                                            <li class="mdl-menu__item">Male</li>
+                                            <li class="mdl-menu__item">Female</li>
+                                        </ul>
+                                        <label for="gender">
+                                            <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>*@
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="Clasificacion" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Clasificacion</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="energia" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Energia</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="Proteina" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Proteina</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="hidrato" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Hidrato</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="lipido" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Lipido</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                            <div class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" name="fibra" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                                    <label class="mdl-textfield__label" for="birthday">Fibra</label>
+                                    <span class="mdl-textfield__error">Solo numeros!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
+                    Cerrar
+                </a>
+                <a id="cerrar_Act" class="mdl-button mdl-button--colored-red mdl-js-button" style="background-color:#e44242">
+                    Cerrar M
+                </a>
+                <button class="mdl-button  mdl-js-button" style="background-color:rgb(255, 152, 0) ; left:55%;">
+                    Guardar Cambios
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Eliminar" class="modal modal__bg">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__title" style="background-color:#e44242 ">
+                    <h2 class="modal__title-text" style="color:#fff">Eliminar Ingrediente</h2>
+                </div>
+            </div>
+            <div class="modal__text">
+                <div class="mdl-grid center">
+                    <h3>Esta seguro de Eliminar este ingrediente?</h3>
+
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
+                    Cancelar
+                </a>
+                <button id="elim" class="mdl-button  mdl-js-button" style="background-color:#4caf50; left:65.5%;">
+                    Si
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Noti_Agregar" class="notif " style="background-color:#4caf50">
+    Ingrediente Agregado
+</div>
+<div id="Noti_Eliminar" class="notif " style="background-color:#e44242">
+    Ingrediente Eliminado
+</div>
+<div id="Noti_Actualizar" class="notif " style="background-color:rgb(255, 152, 0)">
+    Ingrediente Actualizado
+</div>
+<script>
+    document.getElementById("cerrar_Act").onclick = function(){
+        document.getElementById("Actualizar").classList.remove("modal--active");
+        document.getElementById("cont").classList.remove("modal__content--active");
+    }
+
+
+    function ObtenerDatos(id) {
+        var url = "@Url.Action("obDatos","Administrador")";
+        var data = { id }
+
+        $.get(url, data).done(function (data) {
+             var padre = document.getElementById("padre");
+            var old = document.getElementById("info");
+            padre.removeChild(old);
+            $("#padre").append(data);
+        });
+    }
+
+
+</script>
 <link href="/Recursos_Administrador/css/docs.min.css" rel="stylesheet">
 <script src="/Recursos_Administrador/js/material-modal.min.js"></script>
 

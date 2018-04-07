@@ -53,7 +53,7 @@ namespace Nutriologos.Models
         }
         public DataTable TablaIngredientes_(int ID)
         {
-            string Con_SQL = string.Format("Select ID, Nombre FROM Ingredientes where ID = {0}", ID);
+            string Con_SQL = string.Format("Select * FROM Ingredientes where ID = {0}", ID);
             return conex.Tabla_Consultada(Con_SQL);
         }
     }

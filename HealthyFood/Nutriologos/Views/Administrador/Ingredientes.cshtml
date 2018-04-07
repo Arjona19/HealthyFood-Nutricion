@@ -4,122 +4,7 @@
     Layout = "~/Views/Administrador/Pagina_Maestra.cshtml";
 }
 
-<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-    <div class="mdl-card mdl-shadow--2dp trending">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Agregar Ingrediente</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
 
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.Nombre">
-                                        <label class="mdl-textfield__label" for="sample3">Nombre</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.unidad">
-                                        <label class="mdl-textfield__label" for="sample3">Unidad</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.clasificacion">
-                                        <label class="mdl-textfield__label" for="sample3">Clasificación</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.energia">
-                                        <label class="mdl-textfield__label" for="sample3">Valor Energia</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.proteina">
-                                        <label class="mdl-textfield__label" for="sample3">Valor Proteina</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.hidrato">
-                                        <label class="mdl-textfield__label" for="sample3">Valor Hidrato</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.lipido">
-                                        <label class="mdl-textfield__label" for="sample3">Valor Lipido</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-
-                    </tr>
-                    
-                    <tr>
-                        <th></th>
-                        <th>
-                            <div class="modal-body">
-                                <form action="#">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.fibra">
-                                        <label class="mdl-textfield__label" for="sample3">Valor Fibra</label>
-                                    </div>
-                                </form>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-            </table>
-
-            <table>
-                <tr>
-                    <td style="text-align:right">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-modal="#modal" data-upgraded=",MaterialButton,MaterialRipple">
-                            <i class="material-icons">forward</i>
-                            Actualizar
-                            <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.785px; height: 271.785px; transform: translate(-50%, -50%) translate(76px, 18px);"></span></span>
-                        </button>
-                    </td>
-                </tr>
-            </table>
-
-
-        </div>
-    </div>
-</div>
 
 
 <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  ">
@@ -135,7 +20,7 @@
             </div>
         </div>
         <table class="mdl-data-table mdl-js-data-table projects-table">
-            <thead>
+            <thead >
                 <tr>
                     <th class="mdl-data-table__cell--non-numeric">Nombre</th>
                     <th class="mdl-data-table__cell--non-numeric">Unidad</th>
@@ -167,28 +52,60 @@
                             <!--Acciones-->
                             @*@using (Ajax.BeginForm("Consultar_Ingrediente", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
                             {*@
-                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue modal__trigger" data-modal="#Actualizar">
+                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue modal__trigger" data-modal="#Actualizar" onclick="ObtenerDatos(@row["id"])">
                                     <i class="material-icons">create</i>
                                     <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" ></span></span>
                                 </button>
                             @*}*@
+                       
                             </td>
                         <td class="mdl-data-table__cell--non-numeric">
-                            @*@using (Ajax.BeginForm("Eliminar_Ingrediente", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
-                            {*@
+                            <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red modal__trigger" data-modal="#Eliminar">
+                                <i class="material-icons">delete</i>
+                                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                            </button>
 
-                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red modal__trigger" data-modal="#Eliminar" >
-                                    <i class="material-icons">delete</i>
-                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-                                </button>
+                            <div class="mdl-tooltip mdl-tooltip--large" for="Elim">
+                                Eliminar
+                            </div>
+                            @using (Ajax.BeginForm("Eliminar_Ingrediente", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
+                            {@Html.AntiForgeryToken()
+                                <div id="Eliminar" class="modal modal__bg">
+                                    <div class="modal__dialog">
+                                        <div class="modal__content">
+                                            <div class="modal__header">
+                                                <div class="modal__title" style="background-color:#e44242 ">
+                                                    <h2 class="modal__title-text" style="color:#fff">Eliminar Ingrediente</h2>
+                                                </div>
+                                            </div>
+                                            <div class="modal__text">
+                                                <div class="mdl-grid center">
 
-                                <div class="mdl-tooltip mdl-tooltip--large" for="Elim" >
-                                    Eliminar
+                                                    <h5>Esta seguro de Eliminar el ingrediente?</h5>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="modal__footer">
+                                                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
+                                                    Cancelar
+                                                </a>
+                                                <button id="elim" class="mdl-button  mdl-js-button" style="background-color:#4caf50; left:60%;">
+                                                    Si
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            @*}*@
+
+                            }
                         </td>
-                      
+                        
                     </tr>
+                 
+                  
+                   
+                  
                 }
             </tbody>
         </table>
@@ -306,7 +223,7 @@
               </div>
 
             <div class="modal__footer">
-                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">Cerrar
+                <a id="cerrar_A" class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">Cerrar
                 </a>
                 <button class="mdl-button  mdl-js-button" style="background-color:#4caf50; left:66.5%;">
                     Agregar
@@ -316,147 +233,127 @@
     </div>
 </div>
 }
-<div id="Actualizar" class="modal modal__bg">
+<div id="Actualizar" class="modal modal__bg ">
     <div class="modal__dialog">
-        <div class="modal__content">
+        <div id="cont"  class="modal__content">
             <div class="modal__header">
                 <div class="modal__title" style="background-color:rgb(255, 152, 0) ">
                     <h2 class="modal__title-text" style="color:#fff">Actualizar Ingrediente</h2>
                 </div>
             </div>
-            <div class="modal__text">
-                <div class="mdl-grid">
+            <div id="padre">
+                <div id="info" class="modal__text">
 
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="firstName" name="Nombre" value="" />
-                                <label class="mdl-textfield__label" for="firstName">Nombre</label>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="mdl-grid">
 
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="unidad" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-                                <label class="mdl-textfield__label" for="sample4">Unidad</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="firstName" name="Nombre" value="" />
+                        <label class="mdl-textfield__label" for="firstName">Nombre</label>
                     </div>
-
-                    @*<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                            <div class="">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                                    <input class="mdl-textfield__input" value="Male"  name="Clasificacion" type="text" id="gender" readonly tabIndex="-1" />
-                                    <label class="mdl-textfield__label" for="gender">Clasificación</label>
-                                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender" style="background-color:#fff">
-                                        <li class="mdl-menu__item">Male</li>
-                                        <li class="mdl-menu__item">Female</li>
-                                    </ul>
-                                    <label for="gender">
-                                        <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>*@
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="Clasificacion" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Clasificacion</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="energia" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Energia</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="Proteina" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Proteina</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="hidrato" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Hidrato</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="lipido" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Lipido</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                        <div class="">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="fibra" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
-                                <label class="mdl-textfield__label" for="birthday">Fibra</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
-            <div class="modal__footer">
-                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
-                    Cerrar
-                </a>
-                <button class="mdl-button  mdl-js-button" style="background-color:rgb(255, 152, 0) ; left:55%;">
-                    Guardar Cambios
-                </button>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="unidad" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" value="">
+                        <label class="mdl-textfield__label" for="sample4">Unidad</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
             </div>
+
+            @*<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                            <input class="mdl-textfield__input" value="Male"  name="Clasificacion" type="text" id="gender" readonly tabIndex="-1" />
+                            <label class="mdl-textfield__label" for="gender">Clasificación</label>
+                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender" style="background-color:#fff">
+                                <li class="mdl-menu__item">Male</li>
+                                <li class="mdl-menu__item">Female</li>
+                            </ul>
+                            <label for="gender">
+                                <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+                            </label>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="Clasificacion" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Clasificacion</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="energia" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Energia</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="Proteina" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Proteina</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="hidrato" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Hidrato</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="lipido" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Lipido</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="fibra" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="" />
+                        <label class="mdl-textfield__label" for="birthday">Fibra</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
+                </div>
+               </div>
+
+    <div class="modal__footer">
+        <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
+            Cerrar
+        </a>
+        
+        <button class="mdl-button  mdl-js-button" style="background-color:rgb(255, 152, 0) ; left:55%;">
+            Guardar Cambios
+        </button>
+    </div>
+</div>
     </div>
 </div>
 
-<div id="Eliminar" class="modal modal__bg">
-    <div class="modal__dialog">
-        <div class="modal__content">
-            <div class="modal__header">
-                <div class="modal__title" style="background-color:#e44242 ">
-                    <h2 class="modal__title-text" style="color:#fff">Eliminar Ingrediente</h2>
-                </div>
-            </div>
-            <div class="modal__text">
-                <div class="mdl-grid center">
-                    <h3>Esta seguro de Eliminar este ingrediente?</h3>
-                    
-                </div>
-            </div>
 
-            <div class="modal__footer">
-                <a class="mdl-button mdl-button--colored-red mdl-js-button  modal__close" style="background-color:#e44242">
-                    Cancelar
-                </a>
-                <button id="elim" class="mdl-button  mdl-js-button" style="background-color:#4caf50; left:65.5%;" >
-                    Si
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div id="Noti_Agregar" class="notif " style="background-color:#4caf50">
     Ingrediente Agregado
 </div>
@@ -467,13 +364,35 @@
     Ingrediente Actualizado
 </div>
 <script>
-    window.onload = post();
-    function post() {
-        document.getElementById("Noti_Actualizar").classList.add("peek");
+    document.getElementById("cerrar_Act").onclick = function(){
+        document.getElementById("Actualizar").classList.remove("modal--active");
+        document.getElementById("cont").classList.remove("modal__content--active");
+    }
+    var url;
+    var data;
+   
+    document.getElementById("elim").onclick = function () {
+        $.post(url, data).done(function(data){
+            document.getElementById("Noti_Eliminar").classList.add("peek");
+})
     }
    
+
+    function ObtenerDatos(id) {
+        var url = "@Url.Action("obDatos","Administrador")";
+        var data = { id }
+        
+        $.get(url, data).done(function (data) {
+             var padre = document.getElementById("padre");
+            var old = document.getElementById("info");
+            padre.removeChild(old);
+            $("#padre").append(data);     
+        });
+    }
+
+  
 </script>
 <script src="~/Recursos_Administrador/js/Acciones.js"></script>
-<link href="~/Recursos_Administrador/css/Notificaciones.css" rel="stylesheet" />
+
 <link href="~/Recursos_Administrador/css/docs.min.css" rel="stylesheet" />
 <script src="~/Recursos_Administrador/js/material-modal.min.js"></script>

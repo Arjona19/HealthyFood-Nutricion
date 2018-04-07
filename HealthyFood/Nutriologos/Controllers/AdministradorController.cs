@@ -23,6 +23,11 @@ namespace Nutriologos.Controllers
         {
             return View();
         }
+        public PartialViewResult obDatos(int ID)
+        {
+            Ingredientes modal = new Models.Ingredientes();
+            return PartialView("Modal_parcial", modal.TablaIngredientes_(ID));
+        }
         //Pagina de ingredientes
         public ActionResult Ingredientes()
         {
@@ -250,6 +255,13 @@ namespace Nutriologos.Controllers
             Enfermedades();
             return View("Enfermedades");
         }
+        public ActionResult Eliminar_Ingrediente(Recursos_BO.Bo_Admin.IngredientesBO obj)
+        {  
+            Ingredientes modal = new Models.Ingredientes();
+            modal.EliminarIngrediente(obj);
+            Ingredientes();
+            return View("Ingredientes");
+        }
 
         //drop down list de prueba
         public ActionResult Dropdownlist()
@@ -294,19 +306,6 @@ namespace Nutriologos.Controllers
             return obj;
 
         }
-        [HttpPost]
-        public JsonResult datos(int ID)
-        {
-            var resultado = new Response();
-            resultado.ok = true;
-            resultado.Mensaje = ID.ToString();
-            return Json(resultado);
-        }
-        public class Response
-        {
-            public bool ok { get; set; }
-            public string Mensaje { get; set; }
 
-        }
     }
 }

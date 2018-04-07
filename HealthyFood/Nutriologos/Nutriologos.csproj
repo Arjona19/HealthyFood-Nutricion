@@ -318,6 +318,11 @@
     <Content Include="Views\Administrador\Pacientes.cshtml" />
     <Content Include="Views\Administrador\Pagos.cshtml" />
     <Content Include="Views\Administrador\Perfil.cshtml" />
+    <Content Include="Views\Administrador\Modal_parcial.cshtml" />
+    <Content Include="Views\Administrador\Empresas.cshtml" />
+    <Content Include="Views\Administrador\Medidas.cshtml" />
+    <Content Include="Views\Administrador\Unidad.cshtml" />
+    <Content Include="Views\Administrador\Eliminar_parcial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
