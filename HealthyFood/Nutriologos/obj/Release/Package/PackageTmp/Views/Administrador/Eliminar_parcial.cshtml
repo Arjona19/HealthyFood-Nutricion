@@ -1,0 +1,9 @@
+﻿@using System.Data;
+        
+@foreach (DataRow row in Model.Rows)
+{
+<div class="mdl-grid center">
+    <h3>Esta seguro de Eliminar el ingrdiente "@row["Nombre"]"?</h3>
+
+</div>
+}

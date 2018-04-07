@@ -5336,7 +5336,7 @@ input.mdl-button[type="submit"] {
     margin: 0;
     cursor: pointer;
     overflow: hidden;
-    border: 2px solid rgb(81, 168, 249);
+    border:2px solid rgb(76, 175, 80);
     border-radius: 2px;
     z-index: 2;
 }
@@ -11380,7 +11380,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-textfield__input {
     border: none;
-    border-bottom: 1px solid rgba(28, 236, 91, 0.2);
+    border-bottom: 1px solid rgb(220, 220, 220);
     display: block;
     font-size: 16px;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -11403,7 +11403,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-textfield.is-focused .mdl-textfield__input {
     outline: none;
-    border-bottom-color: #2e7d32;
+    border-bottom-color: #4caf50;
 }
 
 .mdl-textfield.is-invalid .mdl-textfield__input {
@@ -11424,7 +11424,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__input,
 
 .mdl-textfield__label {
     bottom: 0;
-    color: rgba(0,0,0, 0.26);
+    color: rgba(31, 29, 29, 0.66);
     font-size: 16px;
     left: 0;
     right: 0;
@@ -11460,7 +11460,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: rgb(0, 188, 212);
+    color: #4caf50;
     font-size: 12px;
     top: 4px;
     visibility: visible;
@@ -11478,7 +11478,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 }
 
 .mdl-textfield__label:after {
-    background-color: rgb(255, 255, 255);
+    background-color: #4caf50;
     bottom: 20px;
     content: '';
     height: 2px;
@@ -14168,7 +14168,7 @@ a {
 .employer-form {
     padding: 0;
     width: 670px;
-    background-color: #4e4e4e;
+    background-color: #fff;
     margin: 16px auto;
 }
 
@@ -14176,7 +14176,7 @@ a {
         width: 20%;
         margin-top: 22px;
         margin-bottom: 22px;
-        color: white;
+        color: black;
     }
 
         .employer-form .mdl-radio span:first-of-type {
@@ -14236,7 +14236,7 @@ a {
 
     .employer-form label {
         font-size: 15px;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(117, 116, 116, 0.6);
     }
 
     .employer-form .form__action .mdl-checkbox .mdl-ripple {
@@ -14270,7 +14270,7 @@ a {
     }
 
     .employer-form__general_skills .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-        color: rgb(0, 188, 212);
+        color: rgb(76, 175, 80);
     }
 
     .employer-form__general_skills textarea {
@@ -14369,9 +14369,9 @@ a {
 
 .form__article h3 {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 20px;s
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
+    color:rgb(0, 0, 0);
     margin-top: 4px;
     margin-bottom: 20px;
 }
@@ -14612,7 +14612,7 @@ a {
 }
 
 .getmdl-select .mdl-icon-toggle__label {
-    color: white;
+    color: rgba(0,0,0,0.4);
 }
 
 .getmdl-select.is-focused i.material-icons {
@@ -14629,7 +14629,7 @@ a {
 
 .getmdl-select .mdl-menu .mdl-menu__item {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: 300;
 }

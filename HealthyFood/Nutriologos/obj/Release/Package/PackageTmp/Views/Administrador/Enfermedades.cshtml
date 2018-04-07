@@ -1,171 +1,243 @@
-﻿
+﻿@using System.Data
 @{
     ViewBag.Title = "Enfermedades";
     Layout = "~/Views/Administrador/Pagina_Maestra.cshtml";
 }
 
 
-
-<div class="clearfix"> </div>
-
-<div class="x_panel">
-    <div class="x_title">
-        <h2>Agregar Enfermedades </h2>
-        <ul class="nav navbar-right panel_toolbox">
-            <li>
-                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </li>
-
-            <li>
-
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
-
-        <button data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-danger"> Agregar Enfermedad</button>
-    </div>
-</div>
+<div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+    <div class="mdl-card mdl-shadow--2dp trending">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Actualizar Enfermedad</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
 
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.nombre">
+                                        <label class="mdl-textfield__label" for="sample3">Nombre</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3" value="@ViewBag.Valor">
+                                        <label class="mdl-textfield__label" for="sample3">Valor</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </th>
+                       
+                    </tr>
+                </thead>
+            </table>
+
+            <table>
+                <tr>
+                    <td style="text-align:right">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-modal="#modal_2" data-upgraded=",MaterialButton,MaterialRipple">
+                            <i class="material-icons">forward</i>
+                            Actualizar
+                            <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.785px; height: 271.785px; transform: translate(-50%, -50%) translate(76px, 18px);"></span></span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
 
 
-
-
-
-
-<div class="clearfix"> </div>
-
-<div class="x_panel">
-    <div class="x_title">
-        <h2>Actualizar Enfermedades </h2>
-        <ul class="nav navbar-right panel_toolbox">
-            <li>
-                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </li>
-
-            <li>
-
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
-        <table>
-            @using (Ajax.BeginForm("Actualizar_Datos_Enfermedad", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
-            {
-                <td> <input class="form-control" name="Nombre" value="@ViewBag.Nombre" type="text" /> </td>
-                <td> <input class="form-control" name="Valor" value="@ViewBag.Valor" type="text" /> </td>
-                <td> <input name="id" style="visibility:hidden" value="@ViewBag.Id" /> </td>
-                <td>
-                    @Html.AntiForgeryToken() <button class="btn btn-outline-danger"> Actualizar Enfermedad</button>
-                </td>}
-        </table>
-
-
-
+        </div>
     </div>
 </div>
 
 
-
-
-
-
-
-
-
-<div class="clearfix"> </div>
-
-<div class="x_panel">
-    <div class="x_title">
-        <h2>Lista de Enfermedades </h2>
-        <br /><br />
-        @using (Ajax.BeginForm("ReporteEnfermedades", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
-            { @Html.AntiForgeryToken()<button class="btn btn-success" style="border:0px; left:5%;">Generar Reporte</button>}
-        <ul class="nav navbar-right panel_toolbox">
-            <li>
-
-            </li>
-
-            <li>
-                <a class="close-link"><i class="fa fa-close"></i></a>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-
-
-    <div class="x_content">
-        <table class="table">
+<div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  ">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-shadow--8dp animated fadeInDown ">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Lista de Enfermedades</h2>
+        </div>
+        <table class="mdl-data-table mdl-js-data-table projects-table">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Valor Formular</th>
-                    <th>Actualizar</th>
-                    <th>Eliminar</th>
+                    <th class="mdl-data-table__cell--non-numeric">Nombre</th>
+                    <th class="mdl-data-table__cell--non-numeric">Valor</th>
+                    <th class="mdl-data-table__cell--non-numeric">Actualizar</th>
+                    <th class="mdl-data-table__cell--non-numeric">Eliminar</th>
                 </tr>
+            </thead>
+
             <tbody>
+                @foreach (DataRow row in Model.Rows)
+                {
+                    <tr id="@row["Id"]">
 
-       
+                        <th class="mdl-data-table__cell--non-numeric">@row["Nombre"]</th>
+                        <th class="mdl-data-table__cell--non-numeric">@row["Valor"]</th>
 
-                    <tr id="fila_">
 
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <!--Acciones-->
+                            @using (Ajax.BeginForm("Consultar_Enfermedad", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
+                            {@Html.AntiForgeryToken()
+                                <button id="Act" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-blue " data-upgraded=",MaterialButton,MaterialRipple" tabindex="0">
+                                    <i class="material-icons">create</i>
+                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 92.5097px; height: 92.5097px; transform: translate(-50%, -50%) translate(19px, 16px);"></span></span>
+                                </button>
+                            }
+                            </td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            @using (Ajax.BeginForm("Eliminar_Enfermedad", "Administrador", new { Id = @row["Id"] }, new AjaxOptions() { HttpMethod = "POST" }))
+                            {@Html.AntiForgeryToken()
 
-                        <td> </td>
-                        <td></td>
+                                <button id="Elim" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple" tabindex="0">
+                                    <i class="material-icons">delete</i>
+                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </button>
 
-                        <td>
-                          <button type="submit" class="btn btn-success">✓</button>
+                                <div class="mdl-tooltip mdl-tooltip--large" for="Elim" data-upgraded=",MaterialTooltip">
+                                    Eliminar
+                                </div>
+                            }
                         </td>
-
-                        <td>
-                         
-                                <button type="submit" class="btn btn-danger">X</button>
-                            
-                        </td>
-
-
                     </tr>
-
-                
+                }
             </tbody>
-
         </table>
+
+        <div class="mdl-card__actions">
+            <!-- Boton agregar-->
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored-purple mdl-shadow--8dp modal__trigger" style="background-color: rgb(21, 162, 208); transform: none;" data-modal="#modal" data-upgraded=",MaterialButton,MaterialRipple">
+                <i class="material-icons">add</i>
+                <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(35px, 11px);"></span></span>
+            </button>
+        </div>
     </div>
 </div>
 
-<!--Modal-->
-@using (Ajax.BeginForm("AgregarEnfe", "Admin_principal_", new AjaxOptions() { HttpMethod = "POST" }))
-{ @Html.AntiForgeryToken()
-    <div class="fade animated modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLabel">Agregar enfermedad</h2>
 
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+
+<div id="modal" class="modal modal__bg">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__title">
+                    <h2 class="modal__title-text">Agregar Nueva Enfermedad</h2>
+                </div>
+            </div>
+            <div class="modal__text">
+                @using (Ajax.BeginForm("Agregar_Enfermedad", "Administrador", new AjaxOptions() { HttpMethod = "POST" }))
+                { @Html.AntiForgeryToken()
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Nombre">
+                                        <label class="mdl-textfield__label" for="sample1">Nombre</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Valor">
+                                        <label class="mdl-textfield__label" for="sample1">Valor</label>
+                                    </div>
+                                </th>
+
+                        </thead>
+                    </table>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Button
                     </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name " class="col-form-label"></label>
-                            <input type="text" name="Nombre" class="form-control" required="required" placeholder="Ingrese enefermedad" id="recipient-name">
-                            <input type="text" name="Nombre" class="form-control" required="required" placeholder="Valor Enfermedad" id="recipient-name">
-                        </div>
+                }
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent modal__close">
+                    Button
+                </button>
+            </div>
 
-                    </form>
-                </div>
-                <div class="modal-footer">
-
-                    <button type="submit" class="btn btn-primary">Agregar</button>
-                </div>
+            <div class="modal__footer">
+                <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" data-upgraded=",MaterialButton">
+                </a>
             </div>
         </div>
     </div>
-}
+</div>
 
+
+<div id="modal_2" class="modal modal__bg">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <div class="modal__header">
+                <div class="modal__title">
+                    <h2 class="modal__title-text">Actualizar Clasificación</h2>
+                </div>
+            </div>
+            <div class="modal__text">
+                @using (Ajax.BeginForm("", "Administrador", new AjaxOptions() { HttpMethod = "POST" }))
+                { @Html.AntiForgeryToken()
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Nombre">
+                                        <label class="mdl-textfield__label" for="sample1">@ViewBag.nombre</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Energia">
+                                        <label class="mdl-textfield__label" for="sample1">@ViewBag.energia</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Proteina">
+                                        <label class="mdl-textfield__label" for="sample1">@ViewBag.proteina</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Hidrato">
+                                        <label class="mdl-textfield__label" for="sample1">@ViewBag.hidrato</label>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" name="Lipido">
+                                        <label class="mdl-textfield__label" for="sample1">@ViewBag.lipido</label>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Button
+                    </button>
+                }
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent modal__close">
+                    Button
+                </button>
+            </div>
+
+            <div class="modal__footer">
+                <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" data-upgraded=",MaterialButton">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="/Recursos_Administrador/css/docs.min.css" rel="stylesheet">
+<script src="/Recursos_Administrador/js/material-modal.min.js"></script>
 

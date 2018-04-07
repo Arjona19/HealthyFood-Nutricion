@@ -135,7 +135,7 @@
               <h1 class="titulo green-text">HealthyFood</h1>
           </div>
 
-@using (Ajax.BeginForm("Loguearse", "Inicio", new AjaxOptions() { HttpMethod = "POST" }))
+@using (Ajax.BeginForm("Principal", "Inicio", new AjaxOptions() { HttpMethod = "POST" }))
 {
   @Html.AntiForgeryToken()
           <div class="row">
@@ -147,12 +147,12 @@
 
                       <div class="input-field col s6">
                           <i class="material-icons prefix">account_circle</i>
-                          <input id="icon_prefix" type="text" class="validate">
-                          <label for="icon_prefix" id="Nombre">Nombre de usuario</label>
+                          <input id="icon_prefix" type="text" class="validate" name="Usuario">
+                          <label for="icon_prefix" id="Usuario">Nombre de usuario</label>
                       </div>
                       <div class="input-field col s6 ">
                           <i class="material-icons prefix">lock</i>
-                          <input id="icon_telephone" type="password" class="validate">
+                          <input id="icon_telephone" type="password" class="validate" name="Contraseña">
                           <label for="icon_telephone" id="contraseña">Contraseña</label>
                       </div>
                   </div>
@@ -165,6 +165,7 @@
                   Iniciar sesion
                   <i class="material-icons right">send</i>
               </a>
+
               <a href="#register" id="registrar" class="btn waves-effect waves-light green modal-trigger rounded " type="submit" name="action">
                   Registrarme
                   <i class="material-icons right">mode_edit</i>

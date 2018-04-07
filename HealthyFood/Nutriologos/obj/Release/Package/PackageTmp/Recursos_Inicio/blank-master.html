@@ -10,123 +10,381 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="css/sweetalert.css"  type="text/css" rel="stylesheet" media="screen,projection" >
-    <link href="css/animate.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+    <link href="css/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection" >
+    <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" >
      <link href="css/style-Master.css"  type="text/css" rel="stylesheet" media="screen,projection" >
+   <!--<link rel="stylesheet" href="SuperAdmnistrador/css/application.css">-->
+    
+     <style>
+    .main {
+  background: url("SuperAdmnistrador/images/Dark_background_1920x1080.png") center top no-repeat;
+  background-size: cover; 
+         display: block}
+    </style>
 </head>
-<body>
-      <ul id="slide-out" class="side-nav ">
+<body style="background-color:gainsboro">
+   
+ <ul id="slide-out" class="side-nav">
    <li>
        <div class="user-view">
       <div class="background">
-          
-        <img src="res/background2.jpg" class="img"> </div>
-      <a href="#!user"><img class="circle" src="res/LogoH.png"></a>
+        <img src="https://images.unsplash.com/photo-1467825487722-2a7c4cd62e75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=abe012e4061cf70c906fec99381840c0&auto=format&fit=crop&w=1050&q=80" class="img"> </div>
+      <a href="#!user"><img class="" src="Imagenes/Title.png"  style="width:100%; height:50%; right:10%;"></a>
       <a href="#!name"><span class="white-text name">Santiago Arjona</span></a>
       <a href="#!email"><span class="white-text email">wilberth2010@hotmail.com</span></a>
    </li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>   
-    <!--Navegador-->
-  <div class="row">
-  <nav class="light-blue darken-2 nav-extended" role="navigation">
-    <div class="nav-wrapper container">
+   
+    <ul class="collapsible">
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class="material-icons">filter_drama</i>
+            First
+            <span class="new badge">4</span></div>
+          <div class="collapsible-body">
+              <div class="collection">
+                  <a href="#!" class="collection-item">Red<span class="new badge red" data-badge-caption="red">4</span></a>
+                  <a href="#!" class="collection-item">Blue<span class="new badge blue" data-badge-caption="blue">4</span></a>
+                </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class="material-icons">place</i>
+            Second
+            <span class="badge">1</span></div>
+          <div class="collapsible-body">
+              <ul class="collection">
+                  <li class="collection-item avatar">
+                    <img src="images/yuna.jpg" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle green">insert_chart</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle red">play_arrow</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                </ul>
+          </div>
+        </li>
+        <li>
+            <div class="collapsible-header waves-effect">
+              <i class="material-icons">filter_drama</i>
+              First
+              <span class="new badge orange">4</span></div>
+            <div class="collapsible-body">
+                <div class="collection">
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                  </div>
+            </div>
+          </li>
+      </ul>
+  </ul>  
+ <!--Navegador-->
+  <div class="navbar-fixed">
+  <nav class="green nav-extended " role="navigation">
+      <ul id="1" class="left hide-on-med-and-down">
+                   <a data-position="bottom" data-delay="50" data-tooltip="Menú" data-activates="slide-out" class="btn-floating  orange lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-2 ">
+              <i class="large material-icons ">menu</i></a>
+        </ul>
         
+    <div class="nav-wrapper container">
+              
       <a id="logo-container" href="#" class="brand-logo titulo white-text">HealthyFood</a>
         
       <ul id="1" class="right hide-on-med-and-down">
+ 
+          <li><a class="waves-effect waves-gray btn orange white-text rounded">Soporte</a></li>
+          <li><a href="#guia" class="waves-effect waves-gray btn orange white-text rounded modal-trigger animated pulse infinite">Tutorial</a></li>
+          <a id="sesion"  data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating orange btn waves-effect waves-light  modal-trigger tooltipped z-depth-2">
+              <i class="large material-icons ">exit_to_app</i></a>
+              
+              
 
-        <li><a class="waves-effect waves-gray btn white blue-text rounded">INICIO</a></li>
-          <li><a class="waves-effect waves-gray btn white blue-text rounded">DIABETES</a></li>
-          <li><a class="waves-effect waves-gray btn white blue-text rounded">contacto</a></li>
-          <a id="Session" data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating blue lighten btn waves-effect waves-light  modal-trigger tooltipped z-depth-5">
-              <i class="large material-icons ">power_settings_new</i></a>
-          <a data-position="right" data-delay="50" data-tooltip="Perfil" data-activates="slide-out" class="btn-floating  blue lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-5 ">
-              <i class="large material-icons ">account_circle</i></a>
       </ul>
-      <a href="#" data-target="#1" aria-controls="1" aria-expanded="false" aria-label="Toggle navigation" class=" button-collapse"><i class="material-icons ">menu</i></a>
+        <div class="tap-target blue" data-activates="sesion">
+    <div class="tap-target-content">
+      <h5>Cerrar sesión</h5>
+      <p>Esta boton permite cerrar la sesión del usuario</p>
     </div>
-  </nav>
+  </div>
+        
+      <a href="#" data-activates="slide-out" aria-controls="1" aria-expanded="true" aria-label="Toggle navigation" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+        
     </div>
-    
-     <!--Footer-->
-  <footer class="page-footer light-blue darken-2">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+  </nav>   
+    </div>
+    <div id="guia" class="modal left-sheet">
+    <div class="modal-content">
+      <h3>Guia de uso  <i class="large material-icons" style="font-size: 40px">description</i></h3>
+      
+    <div class="col s12">
+     <ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a class="active" href="#test-swipe-1">Sesión</a></li>
+    <li class="tab col s3"><a  href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12">
+        <h5>Cerrar sesión</h5>
+        <a id="target" class="btn rounded" >Ver</a>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-dark-thin mCSB_scrollTools_vertical" style="display: block;"><a href="#" class="mCSB_buttonUp" oncontextmenu="return false;" style="display: block;"></a><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 157px; max-height: 561px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div><a href="#" class="mCSB_buttonDown" oncontextmenu="return false;" style="display: block;"></a></div>
+  <div id="test-swipe-2" class="col s12 red">
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-     </body>
-    
-    <script>
-           $(document).ready(function(){
-               
-                       
+    </div>
+  <div id="test-swipe-3" class="col s12 green">
+        
+        
+        </div>
+  </div>
+        
   
-               
-              $(".nav-bar").sideNav({
-      menuWidth: 300, 
-      edge: 'right', // Choose the horizontal origin
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    
+    </div>
+  </div>
+    </div>
+    <div class="col s12">
+        <ul class="tabs tabs-fixed-width ">
+          <li class="tab col s3"><a href="#test1" class="active green-text">Calorias</a></li>
+          <li class="tab col s3"><a class="green-text" href="#test2">Test 2</a></li>
+          <li class="tab col s3 "><a href="#test3" class="green-text">Disabled Tab</a></li>
+          <li class="tab col s3"><a href="#test4" class="green-text">Test 4</a></li>
+        </ul>
+      </div>
+      <div id="test1" class="col s12">
+          <div class="row">
+      
+              
+              <div class="col s12">
+                
+                  <div id="Cal" class="card col s12 " >
+                      <div class="row">
+                         <div class="card-panel orange">
+                                <span class="white-text">Calculo de calorias</span>
+                              </div>
+                              <div class="input-field col s6">
+                                  <select>
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                  </select>
+                                  <label>Edad</label>
+                                </div>
+                          <div class="input-field col s6">
+                            <input placeholder="" id="first_name" type="Number" class="validate">
+                            <label for="first_name" class="active">Altura en centimetros</label>
+                          </div>
+                          <div class="input-field col s6">
+                              <select>
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                
+                              </select>
+                              <label>Sexo</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="first_name" type="Number" class="validate">
+                                <label for="first_name" class="active">Peso en Kilos</label>
+                              </div>  
+                              <div class="input-field col s12">
+                                  <select class="icons">
+                                    <option value="0" disabled selected>Seleccionar</option>
+                                    <option value="1" data-icon="Imagenes/sentado.png" class="">Poco o ningun ejercicio</option>
+                                    <option value="2" data-icon="Imagenes/jardinero.png" class="">Ejercicio ligero (1-3 dias a la semana)</option>
+                                    <option value="3" data-icon="Imagenes/trotar.png" class="">Ejercicio moderado (3-5 dias a la semana)</option>
+                                    <option value="4" data-icon="Imagenes/trotar.png" class="">Ejercicio fuerte (6-7 dias a la semana)</option>
+                                    <option value="5" data-icon="Imagenes/nadar.png" class="">Ejercicio muy fuerte (dos veces al dia, entrenamientos muy duros)</option>
+                                  </select>
+                                  <label>Gasto energetico</label>
+                                </div>    
+                                <a class="waves-effect waves-light orange rounded btn"><i class="material-icons right">send</i>Calcular</a>
+ 
+                        </div>
+                      
+                      </div>
+           
+        
+                </div>
+              
+            
+      </div>
+      </div>
+      <div id="test2" class="col s12">
+          <div class="row">
+      
+            
+              <div class="col s12">
+                
+                  <div  class="card col s7 " style="margin-left:2%">
+                      <div class="row">
+                         <div class="card-panel orange">
+                                <span class="white-text">Calculo de calorias</span>
+                              </div>
+                              <div class="input-field col s6">
+                                  <select>
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                  </select>
+                                  <label>Edad</label>
+                                </div>
+                          <div class="input-field col s6">
+                            <input placeholder="" id="first_name" type="Number" class="validate">
+                            <label for="first_name" class="active">Altura en centimetros</label>
+                          </div>
+                          <div class="input-field col s6">
+                              <select>
+                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                
+                              </select>
+                              <label>Sexo</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="first_name" type="Number" class="validate">
+                                <label for="first_name" class="active">Peso en Kilos</label>
+                              </div>
+                        </div>
+                      
+                      </div>
+           
+        
+                </div>
+              
+              
+      </div>
+       </div>
+        
      
-    });
+      <div id="test3" class="col s12">Test 3</div>
+      <div id="test4" class="col s12">Test 4</div>
+   
+    
+    
+    
+    
+    
+    
+    
+    
+      </div>
+ 
+       <!--Footer-->
+       <footer class="page-footer green">
+          <div class="container">
+            <div class="row">
                
-             $('.collapsible').collapsible();   
-               
-               $('#Session').click(function(){
-           swal({ 
-            title: "Quieres salir del sistema?",   
-            text: "La sesión actual se cerrará y abandonará el sistema",   
-            type: "warning",   
-            showCancelButton: true,   
-            confirmButtonColor: "#0277bd",   
-            confirmButtonText: "Si",
-            animation: "slide-from-top",   
-            closeOnConfirm: false,
-            cancelButtonText: "Cancelar"
-        }, function(){   
-            window.location='index.html'; 
-        })
-        }); 
-           });
-    </script>
-</html>
+              <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+      
+      
+              </div>
+              <div class="col l3 s12">
+                <h5 class="white-text">Settings</h5>
+                <ul>
+                  <li><a class="white-text" href="#!">Link 1</a></li>
+                  <li><a class="white-text" href="#!">Link 2</a></li>
+                  <li><a class="white-text" href="#!">Link 3</a></li>
+                  <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+              <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                  <li><a class="white-text" href="#!">Link 1</a></li>
+                  <li><a class="white-text" href="#!">Link 2</a></li>
+                  <li><a class="white-text" href="#!">Link 3</a></li>
+                  <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+          </div>
+        </footer>
+        
+      
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script src="js/sweetalert.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+           </body>
+      <!--No mover nada de scripst-->    
+          <script>
+                 $(document).ready(function(){
+                  
+          $('.scrollspy').scrollSpy();
+        });
+               $('ul.tabs').tabs();
+               $('.modal').modal();
+              $('#target').click(function(){
+                   $('.tap-target').tapTarget('open'); 
+              });
+                 $(document).ready(function(){
+                        $('.slider').slider();
+                                   $('.carousel').carousel();
+          $(".nav-bar").sideNav({
+            menuWidth: 300, 
+            edge: 'left', // Choose the horizontal origin
+          });
+        
+          $('.dropdown-button').dropdown();
+      
+      
+      
+                   $('.collapsible').collapsible();   
+                   $('select').material_select();
+                     $('#sesion').click(function(){
+                 swal({ 
+                  title: "Quieres salir del sistema?",   
+                  text: "La sesión actual se cerrará y abandonará el sistema",   
+                  type: "warning",   
+                  showCancelButton: true,   
+                  confirmButtonColor: "#0277bd",   
+                  confirmButtonText: "Si",
+                  animation: "slide-from-top",   
+                  closeOnConfirm: false,
+                  cancelButtonText: "Cancelar"
+              }, function(){   
+                  window.location='index.html'; 
+              })
+              }); 
+                 });
+
+          </script>
+      </html>

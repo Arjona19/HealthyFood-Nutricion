@@ -1,0 +1,98 @@
+﻿@using System.Data;
+@foreach (DataRow row in Model.Rows)
+{
+    <div id="info" class="modal__text">
+        <div class="mdl-grid">
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="firstName" name="Nombre" value="@row["Nombre"]" />
+                        <label class="mdl-textfield__label" for="firstName">Nombre</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="unidad" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4" value="@row["Id_Unidad"]">
+                        <label class="mdl-textfield__label" for="sample4">Unidad</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                            <input class="mdl-textfield__input" value="Male"  name="Clasificacion" type="text" id="gender" readonly tabIndex="-1" />
+                            <label class="mdl-textfield__label" for="gender">Clasificación</label>
+                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="gender" style="background-color:#fff">
+                                <li class="mdl-menu__item">Male</li>
+                                <li class="mdl-menu__item">Female</li>
+                            </ul>
+                            <label for="gender">
+                                <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
+                            </label>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="Clasificacion" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Id_Clasificacion"]" />
+                        <label class="mdl-textfield__label" for="birthday">Clasificacion</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="energia" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Energia"]" />
+                        <label class="mdl-textfield__label" for="birthday">Energia</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="Proteina" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Proteina"]" />
+                        <label class="mdl-textfield__label" for="birthday">Proteina</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="hidrato" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Hidratos"]" />
+                        <label class="mdl-textfield__label" for="birthday">Hidrato</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="lipido" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Liquidos"]" />
+                        <label class="mdl-textfield__label" for="birthday">Lipido</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="fibra" pattern="-?[0-9]*(\.[0-9]+)?" id="birthday" value="@row["Fibra"]" />
+                        <label class="mdl-textfield__label" for="birthday">Fibra</label>
+                        <span class="mdl-textfield__error">Solo numeros!</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        }

@@ -22,29 +22,94 @@
          display: block}
     </style>
 </head>
-<body>
-   <main class="main">
-
+<body style="background-color:gainsboro">
+   
  <ul id="slide-out" class="side-nav">
    <li>
        <div class="user-view">
       <div class="background">
-        <img src="res/background2.jpg" class="img"> </div>
-      <a href="#!user"><img class="circle" src="res/icon-healthyfood.png"></a>
+        <img src="https://images.unsplash.com/photo-1467825487722-2a7c4cd62e75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=abe012e4061cf70c906fec99381840c0&auto=format&fit=crop&w=1050&q=80" class="img"> </div>
+      <a href="#!user"><img class="" src="Imagenes/Title.png"  style="width:100%; height:50%; right:10%;"></a>
       <a href="#!name"><span class="white-text name">Santiago Arjona</span></a>
       <a href="#!email"><span class="white-text email">wilberth2010@hotmail.com</span></a>
    </li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+   
+    <ul class="collapsible">
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class="material-icons">filter_drama</i>
+            First
+            <span class="new badge">4</span></div>
+          <div class="collapsible-body">
+              <div class="collection">
+                  <a href="#!" class="collection-item">Red<span class="new badge red" data-badge-caption="red">4</span></a>
+                  <a href="#!" class="collection-item">Blue<span class="new badge blue" data-badge-caption="blue">4</span></a>
+                </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header waves-effect">
+            <i class="material-icons">place</i>
+            Second
+            <span class="badge">1</span></div>
+          <div class="collapsible-body">
+              <ul class="collection">
+                  <li class="collection-item avatar">
+                    <img src="images/yuna.jpg" alt="" class="circle">
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle green">insert_chart</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle red">play_arrow</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br>
+                       Second Line
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                  </li>
+                </ul>
+          </div>
+        </li>
+        <li>
+            <div class="collapsible-header waves-effect">
+              <i class="material-icons">filter_drama</i>
+              First
+              <span class="new badge orange">4</span></div>
+            <div class="collapsible-body">
+                <div class="collection">
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                  </div>
+            </div>
+          </li>
+      </ul>
   </ul>  
  <!--Navegador-->
   <div class="navbar-fixed">
-  <nav class="light-blue darken-2 nav-extended " role="navigation">
+  <nav class="green nav-extended " role="navigation">
       <ul id="1" class="left hide-on-med-and-down">
-                   <a data-position="bottom" data-delay="50" data-tooltip="Menú" data-activates="slide-out" class="btn-floating  blue lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-2 ">
+                   <a data-position="bottom" data-delay="50" data-tooltip="Menú" data-activates="slide-out" class="btn-floating  orange lighten btn waves-effect waves-light  modal-trigger tooltipped nav-bar z-depth-2 ">
               <i class="large material-icons ">menu</i></a>
         </ul>
         
@@ -53,11 +118,14 @@
       <a id="logo-container" href="#" class="brand-logo titulo white-text">HealthyFood</a>
         
       <ul id="1" class="right hide-on-med-and-down">
-       <li><a href="#cards" class="waves-effect waves-gray btn white blue-text rounded">INICIO</a></li>
-          <li><a class="waves-effect waves-gray btn white blue-text rounded">Contacto</a></li>
-          <li><a href="#guia" class="waves-effect waves-gray btn white blue-text rounded modal-trigger">Guia de uso</a></li>
-          <a id="sesion"  data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating blue lighten btn waves-effect waves-light  modal-trigger tooltipped z-depth-2">
+ 
+          <li><a class="waves-effect waves-gray btn orange white-text rounded">Soporte</a></li>
+          <li><a href="#guia" class="waves-effect waves-gray btn orange white-text rounded modal-trigger animated pulse infinite">Tutorial</a></li>
+          <a id="sesion"  data-position="right" data-delay="50" data-tooltip="Cerrar sesión"  class="btn-floating orange btn waves-effect waves-light  modal-trigger tooltipped z-depth-2">
               <i class="large material-icons ">exit_to_app</i></a>
+              
+              
+
       </ul>
         <div class="tap-target blue" data-activates="sesion">
     <div class="tap-target-content">
@@ -98,148 +166,199 @@
   
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    
     </div>
   </div>
     </div>
  <!--Cards-->
-         <article id="cards" class="col s12 animated fadeInUp scrollspy">
-                
-                <div class=" center-align" style="margin: 40px 0;">
-                    <div class="tile type-card z-depth-4 blue">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                             <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect  light-blue darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                     <div class="tile type-card z-depth-4 orange">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect orange darken-2 waves-light  btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                    <div class="tile type-card z-depth-4 red">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect  red darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                    <div class="tile type-card z-depth-4  purple">
-                        <div class="tile-icon"><i class="large material-icons white-text ">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect purple darken-2 white-text waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                    <div class="tile type-card z-depth-4 cyan darken-3">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect cyan darken-4  waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                    <div class="tile type-card z-depth-4 blue-grey">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect blue-grey darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                    <div class="tile type-card z-depth-4 indigo">
-                        <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
-                        <div class="tile-caption">
-                          <br>
-                            <span class="center-align white-text">Pacientes</span>
-                            
-                        </div>
-                        <a href="#" class="tile-link waves-effect indigo darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
-                    </div>
-                </div>   
-              
-            </article>  
-<!--Cards secundarias-->
-    <div class="container z-depth-5 " >
-    <div id="info" class="row">
-     
-           <div class="card horizontal animated fadeInUp card-hor">
-      <div class="card-image">
-        <img src="res/background2.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>  
+
+    <article id="cards" class="animated fadeInUp scrollspy">
+        <div class="row">  
+       <div class="col s12">
+        <div class="  col s12" style="margin: 40px 0;">
+          <div class="center-align">
+            <div class="tile  z-depth-4 blue">
+                <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
+                <div class="tile-caption">
+                  <br>
+                     <span class="center-align white-text">Pacientes</span>
+                </div>
+                <a href="#" class="tile-link waves-effect blue darken-2 white-text waves-light halfway-fab ">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+
+            </div>
+             <div class="tile  z-depth-4 deep-orange">
+                <div class="tile-icon"><i class="large material-icons white-text">apps</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Calcular</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect deep-orange darken-2 waves-light  ">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+            <div class="tile  z-depth-4 red">
+                <div class="tile-icon"><i class="large material-icons white-text">local_dining</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Menu</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect  red darken-3 waves-light halfway-fab">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+            <div class="tile  z-depth-4  purple">
+                <div class="tile-icon"><i class="large material-icons white-text ">reorder</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Ingredientes</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect purple darken-2 white-text waves-light halfway-fab ">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div></div>
+           <!-- <div class="tile type-card z-depth-4 cyan darken-3">
+                <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Pacientes</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect cyan darken-4  waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+            <div class="tile type-card z-depth-4 blue-grey">
+                <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Pacientes</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect blue-grey darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+            <div class="tile type-card z-depth-4 indigo">
+                <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Pacientes</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect indigo darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+              <div class="tile type-card z-depth-4 cyan">
+                <div class="tile-icon"><i class="large material-icons white-text">account_circle</i></div>
+                <div class="tile-caption">
+                  <br>
+                    <span class="center-align white-text">Pacientes</span>
+                    
+                </div>
+                <a href="#" class="tile-link waves-effect cyan darken-3 waves-light halfway-fab btn-card">View Details &nbsp; <i class="zmdi zmdi-caret-right-circle"></i></a>
+            </div>
+        </div>--> 
+        <div class="row">
+        <div class="col s12 m6">
+            <div class="card ">
+              <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1467825487722-2a7c4cd62e75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=abe012e4061cf70c906fec99381840c0&auto=format&fit=crop&w=1050&q=80">
+                <span class="card-title">Título de la Tarjeta</span>
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
        
+              </div>
+              <div class="card-content">
+                <p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Este es un enlace</a>
+                <a href="#">Este es un enlace</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+              <div class="card small">
+                <div class="card-image">
+                  <img src="https://images.unsplash.com/photo-1467825487722-2a7c4cd62e75?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=abe012e4061cf70c906fec99381840c0&auto=format&fit=crop&w=1050&q=80">
+                  <span class="card-title">Título de la Tarjeta</span>
+                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+         
+                </div>
+                <div class="card-content">
+                  <p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Este es un enlace</a>
+                  <a href="#">Este es un enlace</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card blue">
+                  <div class="card-content white-text">
+                    <p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
+                  </div>
+                  <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                      <li class="tab"><a href="#test1">Test 1</a></li>
+                      <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+                      <li class="tab"><a href="#test3">Test 3</a></li>
+                    <li class="indicator" style="right: 119px; left: 118px;"></li></ul>
+                  </div>
+                  <div class="card-content blue lighten-5">
+                    <div id="test1" style="display: none;">Test 1</div>
+                    <div id="test2" class="active">Test 2</div>
+                    <div id="test3" style="display: none;">Test 3</div>
+                  </div>
+                </div>
+              </div>
+        </div>
         <div class="col s12 animated card1 fadeInUp">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-
-            
-        <div class="col s12 animated card2 fadeInUp">
-          <div class="card orange darken-1 z-depth-5">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action white">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
             </div>
           </div>
-        </div>
-         <div class="col s12 animated card3 fadeInUp">
-          <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+  
+              
+          <div class="col s12 animated card2 fadeInUp">
+            <div class="card orange darken-1 z-depth-5">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action white">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
             </div>
           </div>
-        </div>
-    
-    </div>
+           <div class="col s12 animated card3 fadeInUp">
+            <div class="card blue-grey darken-1 z-depth-5">
+              <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div> 
+      </div> 
    
-    
+      </div>
+    </article>  
 
-    </div>
+
+
+   
      <!--Footer-->
-  <footer class="page-footer light-blue darken-2">
+  <footer class="page-footer green">
     <div class="container">
       <div class="row">
+         
         <div class="col l6 s12">
           <h5 class="white-text">Company Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
@@ -273,7 +392,7 @@
     </div>
   </footer>
   
-</div>
+
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
@@ -283,6 +402,7 @@
 <!--No mover nada de scripst-->    
     <script>
            $(document).ready(function(){
+            
     $('.scrollspy').scrollSpy();
   });
          $('ul.tabs').tabs();
@@ -298,7 +418,10 @@
       edge: 'left', // Choose the horizontal origin
     });
   
-               
+    $('.dropdown-button').dropdown();
+
+
+
              $('.collapsible').collapsible();   
                
                $('#sesion').click(function(){
